@@ -1,0 +1,11 @@
+body{
+    background-image: url("image/grassPix.png");
+    background-color: aqua;
+}
+img{
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+    border-style: groove;
+    border-radius: 40px;
+}
