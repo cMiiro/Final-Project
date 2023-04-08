@@ -1,3 +1,6 @@
+<?php
+include_once("connexionMysql.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +10,6 @@
 <h1><?php 
 if(isset ($_POST['nom']) && isset ($_POST['prenom']) && isset ($_POST['user']) && isset ($_POST['mdp'])){
 if($_POST['mdp']===$_POST['vmdp']){
-    $connexion = mysqli_connect ('localhost','root','','tsg_base') ;
     $nom=$_POST['nom'];
     $prenom=$_POST['prenom'];
     $user=$_POST['user'];
