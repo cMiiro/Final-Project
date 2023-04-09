@@ -8,5 +8,13 @@ function returnNom(){ /*Donne le nom si connecter sinon propose de se connecter*
     }
 }
 
+function getUserByUtil($nomUtil){
+    global $connexion;
+    $selectUser = "SELECT * FROM user WHERE NomUtil='".$nomUtil."'" ;
+    $utilisateur = mysqli_query ($connexion, $selectUser);//permet d'avoir tous les utilisateur avec le nom d'utilisateur et donc toute ces information;
+    $user= mysqli_fetch_assoc ($utilisateur) ;
+    return $user;
+}
+
 
 ?>
