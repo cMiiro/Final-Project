@@ -1,4 +1,6 @@
+
 <?php 
+require_once("connexionMysql.php");//permet de se connecter à Mysql avec ses donné ce qui est nécéssaire pour certaines fonctions.
 
 function returnNom(){ /*Donne le nom si connecter sinon propose de se connecter*/
     if (isset($_COOKIE["user"])){
@@ -15,6 +17,8 @@ function getUserByUtil($nomUtil){
     $user= mysqli_fetch_assoc ($utilisateur) ;
     return $user;
 }
+
+
 
 
 ?>
