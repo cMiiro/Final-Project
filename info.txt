@@ -1,0 +1,23 @@
+C:\xampp\mysql\bin\mysql -u root -p
+
+CREATE TABLE USER(
+    -> Nom VARCHAR(30),
+    -> Prenom VARCHAR(30),
+    -> NomUtil VARCHAR(30),
+    -> mdp VARCHAR(30),
+    -> Email VARCHAR(30),
+    -> Descritpion VARCHAR(160),
+    -> PhotoProfil VARCHAR(160),
+    -> Ban BOOLEAN,
+    -> Modo BOOLEAN
+    -> );
+
+
+    CREATE TABLE publications(
+    -> NomUtil varchar(30),
+    /- -> Game varchar(100), -/
+    -> lienImage varchar(2083),
+    -> DescriptionImage varchar(500),
+    -> dateActu DATE,
+    -> timeActu TIME,
+    -> )
