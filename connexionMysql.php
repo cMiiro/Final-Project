@@ -1,4 +1,5 @@
 <?php
+session_start();
 //paramétre Camille
 $serveur='localhost';
 $username='root';

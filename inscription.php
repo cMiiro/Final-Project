@@ -50,9 +50,9 @@ if(isset($_POST["go"])){ //regarde si le formulaire à déjà été remplie dans
     }
 }else{?>
 </p>
-<p class="formulaire">Nom :<input type="text" size="30" name="nom" value="Votre nom"><br>
-Prénom :<input type="text" size="30" name="prenom" value="Votre Prénom"><br>
-Nom d'Utilisateur :<input type="text" size="30" name="user" value="Votre Nom D'utilisateur"><br>
+<p class="formulaire">Nom :<input type="text" size="30" name="nom" placeholder="Votre nom"><br>
+Prénom :<input type="text" size="30" name="prenom" placeholder="Votre Prénom"><br>
+Nom d'Utilisateur :<input type="text" size="30" name="user" placeholder="Votre Nom D'utilisateur"><br>
 Mot de Passe :<input type="password" size="30" name="mdp"><br>
 Vérification Mot de Passe :<input type="password" size="30" name="vmdp"><br></p>
 <?php }?><br>

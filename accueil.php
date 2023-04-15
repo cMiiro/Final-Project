@@ -15,10 +15,11 @@ width="60" height="50">
     <div class="titre">
         <h1>Touch Some Grass</h1>
     </div>
-<div class="profile"><p><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/399.png" 
-width="60" height="60"><?php returnNom()?></p>
+    <div class="profile"><h2>
+<?php estConnecte()?></h2>
 </div>
-</header>    
+</header> 
+
 <body>
     
 <body>

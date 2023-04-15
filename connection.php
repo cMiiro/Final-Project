@@ -37,7 +37,7 @@ if ($user===null){
 }
 ?></p>
 <?php }else{ ?>
-Nom d'utilisateur :<input type="text" size="30" name="user" value="Votre nom"><br>
+Nom d'utilisateur :<input type="text" size="30" name="user" placeholder="Votre nom"><br>
 Mot de Passe :<input type="password" size="30" name="mdp">
 <?php
 } ?>

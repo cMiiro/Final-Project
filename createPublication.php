@@ -22,7 +22,7 @@ if(isset($_POST["go"])){
 if($_POST["url"] && $_POST["description"]){
 $url=$_POST["url"];
 $description=$_POST["description"];
-$user=$_COOKIE["user"];
+$user=$_SESSION["user"];
 $dateActu=date("Y-m-d h:i:s");
 $AddPublication="INSERT INTO publications VALUES('$user' , '$url' ,'$description' ,'$dateActu');";
 $resultat = mysqli_query ($connexion, $AddPublication );

@@ -1,5 +1,7 @@
 C:\xampp\mysql\bin\mysql -u root -p
 
+CREATE DATABASE tsg_base CHARACTER SET 'utf8';
+
 CREATE TABLE USER(
     -> Nom VARCHAR(30),
     -> Prenom VARCHAR(30),
