@@ -23,3 +23,11 @@ CREATE TABLE USER(
     -> dateActu DATE,
     -> timeActu TIME,
     -> )
+
+
+    Truc à FAIRE
+
+    -meilleur bonton d'abonnement
+    -Ajouter numéro de commentaire
+    -Ajouter les post dans l'aceuil
+    -rendre le tout plus joli

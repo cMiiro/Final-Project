@@ -19,6 +19,41 @@ require_once("fonction.php");
             echo"L'utilisateur chercher n'existe pas";
         }else{
             afficheNomPhotoDeProfil($_GET["user"],100);
+            if($_SESSION["user"]===$_GET["user"]){
+
+            }else{
+                $nomDeTab=$_SESSION["user"]."Abonnement";
+                $nomDePage=$_GET["user"];
+                if(isset($_POST["sub"])){
+                    mysqli_query ($connexion, "INSERT INTO $nomDeTab VALUES('$nomDePage');");
+                    unset($_POST["sub"]);
+                }
+                if(isset($_POST["unsub"])){
+                    mysqli_query ($connexion, "DELETE FROM $nomDeTab WHERE user='$nomDePage';");
+                    unset($_POST["unsub"]);
+                    }
+            $estAbonné="SELECT * FROM $nomDeTab WHERE user='$nomDePage';";
+            $resultat = mysqli_query ($connexion, $estAbonné );//rajouter test
+            $estAbonnée= mysqli_fetch_assoc ($resultat);
+            if( $estAbonnée==NULL){
+                ?>
+                <form method="post">
+            <button type="submit" name="sub">
+              <img src="image/subcribe.jpg">
+            </button>
+          </form>
+                      
+                  <?php
+            }else{
+                ?>
+          <form method="post">
+      <button type="submit" name="unsub">
+        <img src="image/unsubcribe.webp">
+      </button>
+    </form>
+                
+            <?php
+            }
             $user=$_GET["user"];
             $req="SELECT * FROM publications WHERE NomUtil='$user'";
             $resultat = mysqli_query ($connexion, $req );
@@ -28,7 +63,7 @@ require_once("fonction.php");
                 }
             }
         }
-        }
+        }}
         
         ?>
 </h1>

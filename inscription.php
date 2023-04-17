@@ -33,12 +33,12 @@ if(isset($_POST["go"])){ //regarde si le formulaire à déjà été remplie dans
            $AddUser="INSERT INTO user VALUES('$nom' , '$prenom' ,'$user' ,'$mdp',NULL ,'image/profilvide.png',0 ,0);";
            $resultat = mysqli_query ($connexion, $AddUser );
            if ($resultat === TRUE){
-            $AddAbonnement="CREATE TABLE $user"."Abonnement(Nom VARCHAR(30))";
+            $AddAbonnement="CREATE TABLE $user"."Abonnement(user VARCHAR(30))";
             $resultat = mysqli_query ($connexion, $AddAbonnement );
               setcookie("user",$_POST["user"],time()+3600);/* si un nom à été enregistrer alors on se souviendras du nom d'utilisateur. De plus le cookies va rester pendant une heure et ensuite il faudras se reconnecter*/
               $_SESSION["user"]=$_POST["user"];
               header ('Location:accueil.php');}
-           }else{
+           else{
               echo "il y a eu un probléme lors de l'inscryption réessayer";
            }
         }else{
