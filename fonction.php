@@ -4,11 +4,17 @@ require_once("connexionMysql.php");//permet de se connecter à Mysql avec ses do
 
 function estConnecte(){ /*Donne le nom si connecter sinon propose de se connecter*/
 if (isset($_SESSION["user"])){
-    afficheNomPhotoDeProfil($_SESSION["user"]);
+    $user=$_SESSION["user"];
+    echo "<a href=\"profil.php?user=$user\">";
+    afficheNomPhotoDeProfil($_SESSION["user"],60);
+    echo"</a>";
     }else{
         if(isset($_COOKIE["user"])){
      $_SESSION["user"]=$_COOKIE["user"];
-     afficheNomPhotoDeProfil($_SESSION["user"]);
+     $user=$_SESSION["user"];
+     echo "<a href=\"profil.php?user=$user\">";
+     afficheNomPhotoDeProfil($_SESSION["user"],60);
+     echo"</a>";
         }else{
         echo"<a href=\"connection.php\">Se connecter</a>";
     }}
@@ -22,11 +28,19 @@ function getUserByUtil($nomUtil){
     return $user;
 }
 
-function afficheNomPhotoDeProfil($nomUtil){
+function afficheNomPhotoDeProfil($nomUtil,$taille){
     $userData=getUserByUtil($nomUtil);
        $photo=$userData["PhotoProfil"];
-       echo "<img src=\"$photo\" width=\"60\" height=\"60\">" ;
-       echo $_COOKIE["user"];
+       echo "<img src=\"$photo\" width=\"$taille\" height=\"$taille\">" ; 
+       echo $userData["NomUtil"];
+       echo "<br>";
+}
+
+function affichePublications($ligne){ 
+   echo "<table><tr><td><img src=\"";
+              echo $ligne['lienImage'];
+              echo "\"width=500 height=375></td><td>"; echo $ligne['DescriptionImage'];
+             echo"</td></tr><table><br>";
 }
 
 

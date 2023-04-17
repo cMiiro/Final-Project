@@ -25,6 +25,7 @@ if ($user===null){
 }else{
    if($_POST["mdp"]===$user["mdp"]){
     setcookie("user",$_POST["user"],time()+3600); //on enregistre le nom d'utilisateur pendant 3600 secondes(Une heure) pour ne pas avoir à le réécrire.
+    $_SESSION["user"]=$_POST["user"];
     header ('Location:accueil.php');//on va à la page d'acceuil.
    }else{
     echo"Le mot de passe n'est pas celui associer au nom d'utilisateur";

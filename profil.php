@@ -1,3 +1,6 @@
+<?php
+require_once("fonction.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,7 +8,29 @@
 <meta charset="ufr-8"/>
     </head>
     <body>
-    <h1><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/399.png" 
-width="100" height="100">CAMILLE PERY</h1>
+    <h1>
+        <?php
+        if(!isset($_GET["user"])){
+            ?>
+            Désolé nous ne trouvons pas de profil à rechercher. 
+            <?php }else{
+        $userData= getUserByUtil($_GET["user"]);
+        if($userData===NULL){
+            echo"L'utilisateur chercher n'existe pas";
+        }else{
+            afficheNomPhotoDeProfil($_GET["user"],100);
+            $user=$_GET["user"];
+            $req="SELECT * FROM publications WHERE NomUtil='$user'";
+            $resultat = mysqli_query ($connexion, $req );
+            if($resultat){
+                while ($ligne=mysqli_fetch_assoc($resultat)){
+                affichePublications($ligne);
+                }
+            }
+        }
+        }
+        
+        ?>
+</h1>
 </body>
 </html>

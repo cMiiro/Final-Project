@@ -21,6 +21,6 @@ width="60" height="50">
 </header> 
 
 <body>
-    
+    <a href="createPublication.php"> test publications</a>
 <body>
 </html>
