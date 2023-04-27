@@ -3,31 +3,30 @@ C:\xampp\mysql\bin\mysql -u root -p
 CREATE DATABASE tsg_base CHARACTER SET 'utf8';
 
 CREATE TABLE USER(
-    -> Nom VARCHAR(30),
-    -> Prenom VARCHAR(30),
-    -> NomUtil VARCHAR(30),
-    -> mdp VARCHAR(30),
-    -> Email VARCHAR(30),
-    -> Descritpion VARCHAR(160),
-    -> PhotoProfil VARCHAR(160),
-    -> Ban BOOLEAN,
-    -> Modo BOOLEAN
-    -> );
+    Nom VARCHAR(30),
+    Prenom VARCHAR(30),
+    NomUtil VARCHAR(30),
+    mdp VARCHAR(30),
+    Description VARCHAR(160), //(modifier dans mofications.php et profil.php)
+    PhotoProfil VARCHAR(160),
+    Ban BOOLEAN,
+    Modo BOOLEAN);
 
 
     CREATE TABLE publications(
-    -> NomUtil varchar(30),
-    /- -> Game varchar(100), -/
-    -> lienImage varchar(2083),
-    -> DescriptionImage varchar(500),
-    -> dateActu DATE,
-    -> timeActu TIME,
-    -> )
+    NomUtil varchar(30),
+    lienImage varchar(2083),
+    DescriptionImage varchar(500),
+    dateActu DATETIME,
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT);
 
 
     Truc à FAIRE
 
     -meilleur bonton d'abonnement
-    -Ajouter numéro de commentaire
-    -Ajouter les post dans l'aceuil
     -rendre le tout plus joli
+    -ajouter nombre d'abonnés et nombre de like
+    -ajouter les fonctionalité des modos
+    -ajouter compte privées
+    -ajouter commentaire like
+    -ajouter signalement

@@ -39,8 +39,18 @@ function afficheNomPhotoDeProfil($nomUtil,$taille){
 function affichePublications($ligne){ 
    echo "<table><tr><td><img src=\"";
               echo $ligne['lienImage'];
-              echo "\"width=500 height=375></td><td>"; echo $ligne['DescriptionImage'];
+              echo "\"width=500 height=375></td><td>"; 
+              afficheNomPhotoDeProfil($ligne['NomUtil'],30);
+              echo $ligne['DescriptionImage'];
              echo"</td></tr><table><br>";
+}
+
+function estModo($user){
+    $userdata=getUserByUtil($user);
+    if($userdata["Modo"]==="1"){
+        return true;
+    }
+    return false;
 }
 
 
