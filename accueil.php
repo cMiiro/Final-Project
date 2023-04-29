@@ -36,7 +36,12 @@ require_once('header.php');
             affichePublications($ligne);
         }}}
     
+        if(isset($_POST["recherche"])){
+            $userChercher= $_POST["recherche"];
+            header ("Location:profil.php?user=$userChercher");
+        }
     ?>
+    
 
 <body>
 </html>
