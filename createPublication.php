@@ -11,8 +11,8 @@ require_once("fonction.php");
     <table border=1>
         <tr><th>
         <form action="createPublication.php" method="post" autocomplete="on">
-         Document à envoyer : <input type="url" name="url"><br>
-         Description <br> <textarea name="description" rows="10" cols="10" >
+         Document à envoyer : <input type="url" name="url" placeholder="URL"><br>
+         Description <br> <textarea name="description" rows="10" cols="80" >
 </textarea><br>
 
         <input type="submit" name="go">

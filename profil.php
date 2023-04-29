@@ -55,7 +55,7 @@ require_once('header.php');
                     </form>
                     <?php
                     }}else{
-            echo $userData["Descritpion"];
+            echo $userData["Description"];
             echo "<br>";
             if($_SESSION["user"]===$_GET["user"]){
             echo"<a href='modifications.php'>modification profil</a><br>";

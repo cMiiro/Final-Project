@@ -7,6 +7,9 @@ require_once("fonction.php");
 <meta charset="ufr-8">
 <link rel="stylesheet" href="connection.css">
 </head>
+<div class="anime"></div>
+<h1>Touch Some Grass</h1>
+<h2>Avec Touch Some Grass, vous allez être fasciner par l'herbe VERTE</h2>
 <body><table border="1">
     <tr><th>
     <form action="connection.php" method="post">

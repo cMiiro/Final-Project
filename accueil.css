@@ -1,6 +1,11 @@
-header{
+
+  header {
     text-align: center;
-    background-color: greenyellow;
+    background-color: rgb(7, 133, 28);
+    color: yellow;
+}
+header h1{
+    font-family:cursive;
 }
 .home{
     float: left;
@@ -24,7 +29,9 @@ float: right;
     display: inline-block;
 }
 body{
-background-image: url("image/grassPix.png");
+background-image: url("image/grassass.jpg");
+background-position: center;
+min-height: 80vh;
 }
 img{
     background-color: white;

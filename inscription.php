@@ -5,9 +5,14 @@ require_once("fonction.php");
 <html>
 <head>
 <meta charset="ufr-8">
-<link rel="stylesheet" href="connection.css">
+<link rel="stylesheet" href="inscription.css">
 </head>
-<body><table border="1">
+<body>
+<div class="primary">
+   <h1> Bienvenue!<h1></div>
+   <div class="secondary">
+      <h2>Nous sommes heureux de te voir!</h2></div>
+   <table border="1">
     <tr><th>
     <form action="inscription.php" method="post">
 <?php

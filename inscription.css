@@ -1,31 +1,32 @@
-body {
+body{
     background-image: url("image/poke.jpg");
-  }
-h1{
+}
+.primary{
     color: #3e3c3c;
-    font-size: 50px;
-    line-height: 216px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
     text-align: center;
     font-family: cursive;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
 }
-h2{
+.secondary{
     color: #2c2424;
-    font-size: 15px;
-    line-height: 495px;
+    font-size: 16px;
+    line-height: 20px;
     text-align: center;
-    font-family: verdana;
+    font-family: serif;
 }
-  
-  table {
+table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border:2px solid green;
     border-radius: 18px;
-    box-shadow: 0 0 200px 4px #4CAF50;
-    width: 60%;
+    box-shadow: 0 0 200px 4px #78cf7b;
+    width: 40%;
+    margin: auto;
     font-family: cursive;
-    position: absolute;
-    top: 29%;
-    left: 19%;
   }
   
   th {
@@ -50,7 +51,6 @@ h2{
     padding: 10px;
     width: 100%;
   }
-  
   input[type="password"] {
     border: 1px solid #000000;
     border-radius: 4px;
@@ -74,3 +74,4 @@ h2{
     font-weight: bold;
     margin: 10px;
   }
+  

@@ -5,14 +5,14 @@ require_once("fonction.php"); //rajouter sécurité une personne non connecté n
 <html>
 <head>
 <meta charset="ufr-8">
-<link rel="stylesheet" href="connection.css">
+<link rel="stylesheet" href="inscription.css">
 </head>
 <body>
     <table border=1>
         <tr><th>   
         <form action="modifications.php" method="post" autocomplete="on">
-         Modifier Photo De Profil : <input type="text" name="Newprofil"><br>
-         Nouvelle Description <br> <textarea name="NewDescription" rows="10" cols="10" ></textarea><br>
+         Modifier Photo De Profil : <input type="text" name="Newprofil" placeholder="URL"><br>
+         Nouvelle Description <br> <textarea name="NewDescription" rows="10" cols="70" ></textarea><br>
          Ancien Mot De Passe : <input type="text" name="OldMdp"><br>
          Nouveau Mot De Passe :<input type="text" name="Newmdp"><br>
         <input type="submit" name="go"></form>
@@ -25,7 +25,7 @@ require_once("fonction.php"); //rajouter sécurité une personne non connecté n
             }
             if($_POST['NewDescription']!==''){
                 $newDes=$_POST["NewDescription"];
-                $req="UPDATE user SET Descritpion='$newDes' WHERE NomUtil='$user' "; //modifier le nom
+                $req="UPDATE user SET Description='$newDes' WHERE NomUtil='$user' "; //modifier le nom
                 $resultat = mysqli_query ($connexion, $req );
             }
             if($_POST["Newmdp"]!=="" && $_POST["OldMdp"]!==""){

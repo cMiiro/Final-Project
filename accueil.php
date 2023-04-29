@@ -7,7 +7,6 @@ require_once('header.php');
     <link rel="stylesheet" href="accueil.css">
 <meta charset="ufr-8">
     </head>
-
 <body>
     <a href="createPublication.php"> test publications</a><br>
     <?php 
