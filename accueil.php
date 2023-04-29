@@ -8,7 +8,7 @@ require_once('header.php');
 <meta charset="ufr-8">
     </head>
 <body>
-    <a href="createPublication.php"> test publications</a><br>
+    <a href="createPublication.php"> <img class="plus" src="image/plus.png"></a><br>
     <datalist id="ListeUser">
      <?php 
      $listeUser=mysqli_query($connexion,"SELECT * From user ORDER BY abonées");

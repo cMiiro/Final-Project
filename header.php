@@ -5,7 +5,7 @@ require_once('fonction.php');
 <html>
 <header>
     <div class="home">
-    <a href="accueil.php"><img src="image/home.jpg" width="60" height="50"></a>
+    <a href="accueil.php"><img class="home" src="image/home22.png"></a>
 </div>
     <div class="titre">
         <h1>Touch Some Grass</h1>

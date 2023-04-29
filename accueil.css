@@ -1,17 +1,30 @@
 
   header {
-    text-align: center;
-    background-color: rgb(7, 133, 28);
-    color: yellow;
+        text-align: center;
+        background-image: url(image/liane.png);
+        color: lawngreen;
+        background-position-y: -28px;
+        border: solid;
+        border-radius: 20px;
+        height: 100px
 }
 header h1{
-    font-family:cursive;
+    font-family: serif;
+    font-size: 50px;
+    top: -12px;
+    position: relative;
 }
 .home{
     float: left;
+    position: absolute;
+    top: 15px;
+    height: 55px;
 }
 .profile{
-float: right;
+    float: right;
+    position: relative;
+    top: -11px;
+    text-align: center;
 }
 .profile img{
     background-color: white;
@@ -19,6 +32,8 @@ float: right;
     border-width: 1px;
     border-style: groove;
     border-radius: 15px;
+    position: relative;
+    left: 5px;
 }
 .profile p{
     color: red;
@@ -33,11 +48,47 @@ background-image: url("image/grassass.jpg");
 background-position: center;
 min-height: 80vh;
 }
-img{
-    background-color: white;
+.plus{
+    background-color: lawngreen;
     border-color: black;
-    border-width: 1px;
     border-style: groove;
-    border-radius: 40px;
+    border-radius: 37px;
+    height: 39px;
+    position: absolute;
+    right: 35px;
+}
+input{
+    width: 176px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    position: relative;
+    left: 37%;
 }
 
+  button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+    left: 37%;
+  }
+
+.profile a{
+    color: lawngreen;
+    font-family: serif;
+    display: grid;
+    top: -5px;
+    position: relative;
+    left: -19px;
+}
