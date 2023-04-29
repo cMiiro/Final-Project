@@ -29,6 +29,8 @@ require_once('header.php');
   
                 if(isset($_POST["sub"])){
                     mysqli_query ($connexion, "INSERT INTO $nomDeTab VALUES('$nomDePage');");
+                    $newNbAbonée=getNbAbonnes($nomDePage)+1;
+                    mysqli_query($connexion,"UPDATE user SET abonées=$newNbAbonée WHERE NomUtil='$nomDePage'");
                     unset($_POST["sub"]);
                 }
                 if(isset($_POST["Ban"])){
@@ -38,6 +40,8 @@ require_once('header.php');
                 }
                 if(isset($_POST["unsub"])){
                     mysqli_query ($connexion, "DELETE FROM $nomDeTab WHERE user='$nomDePage';");
+                    $newNbAbonée=getNbAbonnes($nomDePage)-1;
+                    mysqli_query($connexion,"UPDATE user SET abonées=$newNbAbonée WHERE NomUtil='$nomDePage'");
                     unset($_POST["unsub"]);
                     }
 
@@ -55,7 +59,8 @@ require_once('header.php');
                     </form>
                     <?php
                     }}else{
-            echo $userData["Description"];
+                        echo "Cette utilisateur a ".getNbAbonnes($nomDePage)." abonés.<br>";
+                        echo $userData["Description"];
             echo "<br>";
             if($_SESSION["user"]===$_GET["user"]){
             echo"<a href='modifications.php'>modification profil</a><br>";

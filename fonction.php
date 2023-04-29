@@ -54,6 +54,8 @@ function estModo($user){
 }
 
 
-
-
+function getNbAbonnes($user){
+    $userData=getUserByUtil($user);
+    return $userData["abonées"];
+}
 ?>

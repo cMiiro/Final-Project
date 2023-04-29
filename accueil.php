@@ -9,6 +9,18 @@ require_once('header.php');
     </head>
 <body>
     <a href="createPublication.php"> test publications</a><br>
+    <datalist id="ListeUser">
+     <?php 
+     $listeUser=mysqli_query($connexion,"SELECT * From user ORDER BY abonées");
+     while ($ligne=mysqli_fetch_assoc($listeUser)){
+    echo '<option value="'.$ligne['NomUtil'].'"></option>'; 
+    }
+     ?>
+</datalist>
+<form action="accueil.php" method="post">
+<input type="search" name="recherche" list="ListeUser" placeholder="Valeur par defaut">
+<button type="submit">rechercher</button>
+</form>
     <?php 
     estModo($_SESSION["user"]);
     $req="Select * from publications;";
