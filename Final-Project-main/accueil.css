@@ -1,0 +1,43 @@
+
+  header {
+    text-align: center;
+    background-color: rgb(7, 133, 28);
+    color: yellow;
+}
+header h1{
+    font-family:cursive;
+}
+.home{
+    float: left;
+}
+.profile{
+float: right;
+}
+.profile img{
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+    border-style: groove;
+    border-radius: 15px;
+}
+.profile p{
+    color: red;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.titre {
+    text-align: center;
+    display: inline-block;
+}
+body{
+background-image: url("image/grassass.jpg");
+background-position: center;
+min-height: 80vh;
+}
+img{
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+    border-style: groove;
+    border-radius: 40px;
+}
+
