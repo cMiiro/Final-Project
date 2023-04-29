@@ -4,7 +4,7 @@ require_once('header.php');
 <!DOCTYPE html>
 <html>
     <head>
-     <link rel="stylesheet" href="accueil.css">
+     <link rel="stylesheet" href="profile.css">
      <meta charset="ufr-8"/>
     </head>
     <body>
@@ -47,6 +47,7 @@ require_once('header.php');
 
 
 
+                      
             afficheNomPhotoDeProfil($_GET["user"],100);
             if($userData["Ban"]==="1"){
                 echo"Cette utilisateur a été bani(e).<br> Son contenu ne peux plus être visible.<br>";
@@ -59,7 +60,7 @@ require_once('header.php');
                     </form>
                     <?php
                     }}else{
-                        echo "Cette utilisateur a ".getNbAbonnes($nomDePage)." abonés.<br>";
+                        echo "Cette utilisateur a ".getNbAbonnes($nomDePage)." abonné(s).<br>";
                         echo $userData["Description"];
             echo "<br>";
             if($_SESSION["user"]===$_GET["user"]){
@@ -72,7 +73,7 @@ require_once('header.php');
                 ?>
                 <form method="post">
             <button type="submit" name="sub">
-              <img src="image/subcribe.jpg">
+            <img class="suivre" src="image/suivre2.png">
             </button>
           </form>
                       
@@ -81,10 +82,10 @@ require_once('header.php');
                 ?>
           <form method="post">
       <button type="submit" name="unsub">
-        <img src="image/unsubcribe.webp">
+      <img class="suivie" src="image/suivie.png">
       </button>
     </form>
-                
+
             <?php
             }if(estModo($_SESSION["user"])===true){
                 ?>
@@ -99,13 +100,15 @@ require_once('header.php');
             $req="SELECT * FROM publications WHERE NomUtil='$user'";
             $resultat = mysqli_query ($connexion, $req );
             if($resultat){
+                echo '<div class="PUB">';
                 while ($ligne=mysqli_fetch_assoc($resultat)){
                 affichePublications($ligne);
                 }
+                echo'</div>';
             }
         }
         }}
-        
+
         ?>
 </h1>
 </body>

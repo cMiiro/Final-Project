@@ -1,13 +1,13 @@
-
-  header {
-        text-align: center;
-        background-image: url(image/liane.png);
-        color: lawngreen;
-        background-position-y: -28px;
-        border: solid;
-        border-radius: 20px;
-        height: 100px
+header {
+    text-align: center;
+    background-image: url(image/liane.png);
+    color: lawngreen;
+    background-position-y: -28px;
+    border: solid;
+    border-radius: 20px;
+    height: 100px
 }
+
 header h1{
     font-family: serif;
     font-size: 50px;
@@ -27,8 +27,8 @@ header h1{
     text-align: center;
 }
 .profile img{
-    background-color: white;
-    border-color: black;
+    background-color: rgb(198, 39, 39);
+    border-color: rgb(145, 52, 52);
     border-width: 1px;
     border-style: groove;
     border-radius: 15px;
@@ -71,7 +71,7 @@ input{
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 2px 37px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -81,8 +81,9 @@ input{
     cursor: pointer;
     border-radius: 20px;
     position: relative;
-    left: 37%;
-  }
+    left: -1%;
+    top: 62%;
+}
 
 .profile a{
     color: lawngreen;
@@ -97,8 +98,31 @@ input{
     border-radius: 20px;
     border:solid;
 }
-table{
+
+img.suivre{
+    height: 34px;
+}
+
+img.suivie{
+    height:34px;
+}
+button:hover{
+    background-color: rgb(104, 104, 104);
+    transition: 0.7s;
+}
+
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: chartreuse;
+  }
+
+
+.PUB{
+    height: 54%;
     border: solid;
+    background-color: #418f5d;
+    position: absolute;
+    width: 99%;
     border-radius: 20px;
-    background-color: green;
 }

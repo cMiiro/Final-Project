@@ -45,6 +45,7 @@ function affichePublications($ligne){
              echo"</td></tr><table><br>";
 }
 
+
 function estModo($user){
     $userdata=getUserByUtil($user);
     if($userdata["Modo"]==="1"){
