@@ -100,7 +100,7 @@ require_once('header.php');
             $req="SELECT * FROM publications WHERE NomUtil='$user'";
             $resultat = mysqli_query ($connexion, $req );
             if($resultat){
-                echo '<div class="PUB">';
+                echo '<div class="pub">';
                 while ($ligne=mysqli_fetch_assoc($resultat)){
                 affichePublications($ligne);
                 }

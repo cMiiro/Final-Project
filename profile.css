@@ -118,11 +118,9 @@ button:hover{
   }
 
 
-.PUB{
-    height: 54%;
+table{
     border: solid;
     background-color: #418f5d;
-    position: absolute;
     width: 99%;
     border-radius: 20px;
 }
