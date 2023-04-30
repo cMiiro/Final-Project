@@ -1,76 +1,76 @@
 body {
-    background-image: url("image/poke.jpg");
-  }
-h1{
-    color: #3e3c3c;
-    font-size: 50px;
-    line-height: 216px;
-    text-align: center;
-    font-family: cursive;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  background-image: url("image/poke.jpg");
 }
-h2{
-    color: #2c2424;
-    font-size: 15px;
-    line-height: 495px;
-    text-align: center;
-    font-family: verdana;
+h1 {
+  color: #3e3c3c;
+  font-size: 50px;
+  line-height: 216px;
+  text-align: center;
+  font-family: cursive;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
 }
-  
-  table {
-    border:2px solid green;
-    border-radius: 18px;
-    box-shadow: 0 0 200px 4px #4CAF50;
-    width: 60%;
-    font-family: cursive;
-    position: absolute;
-    top: 29%;
-    left: 19%;
-  }
-  
-  th {
-    background-image: url("image/poke3.jpg");
-    border-radius: 10px;
-    background-position: top;
-    color: #3e3c3c;
-    font-size: 18px;
-    padding: 10px;
-    margin:auto;
-  }
-  
-  .formulaire {
-    margin: 10px;
-    text-align: left;
-  }
-  
-  input[type="text"]{
-    border: 1px solid #000000;
-    border-radius: 4px;
-    box-sizing: border-box;
-    padding: 10px;
-    width: 100%;
-  }
-  
-  input[type="password"] {
-    border: 1px solid #000000;
-    border-radius: 4px;
-    box-sizing: border-box;
-    padding: 10px;
-    width: 100%;
-  }
-  
-  input[type="submit"] {
-    background-color: #4CAF50;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 10px;
-    width: 100%;
-  }
-  
-  .erreur {
-    color: red;
-    font-weight: bold;
-    margin: 10px;
-  }
+h2 {
+  color: #2c2424;
+  font-size: 15px;
+  line-height: 495px;
+  text-align: center;
+  font-family: verdana;
+}
+
+table {
+  border: 2px solid green;
+  border-radius: 18px;
+  box-shadow: 0 0 200px 4px #4caf50;
+  width: 60%;
+  font-family: cursive;
+  position: absolute;
+  top: 29%;
+  left: 19%;
+}
+
+th {
+  background-image: url("image/poke3.jpg");
+  border-radius: 10px;
+  background-position: top;
+  color: #3e3c3c;
+  font-size: 18px;
+  padding: 10px;
+  margin: auto;
+}
+
+.formulaire {
+  margin: 10px;
+  text-align: left;
+}
+
+input[type="text"] {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="password"] {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.erreur {
+  color: red;
+  font-weight: bold;
+  margin: 10px;
+}
