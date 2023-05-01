@@ -60,7 +60,7 @@ function affichePublications($ligne){
               <img src=image/like.jpg width=35 height=35>
               </button>
                </form>";}
-             echo"</td></tr><table><br>";
+             echo"</td></tr></table><br>";
 }
 
 function like(){
