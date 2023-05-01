@@ -11,6 +11,8 @@ require_once('header.php');
     <a href="createPublication.php"> <img class="plus" src="image/plus.png"></a><br>
     <datalist id="ListeUser">
      <?php 
+     like();
+     unlike();
      $listeUser=mysqli_query($connexion,"SELECT * From user ORDER BY abonées");
      while ($ligne=mysqli_fetch_assoc($listeUser)){
     echo '<option value="'.$ligne['NomUtil'].'"></option>'; 
