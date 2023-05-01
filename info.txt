@@ -24,6 +24,12 @@ CREATE TABLE user(
     privé BOOLEAN,
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT);
 
+     CREATE TABLE commentaire(
+         NomUtil varchar(30),
+         TexteCom varchar(60),
+         idCom INT);
+
+
 
     Truc à FAIRE
 

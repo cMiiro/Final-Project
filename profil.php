@@ -14,6 +14,8 @@ require_once('header.php');
             ?>
             Désolé nous ne trouvons pas de profil à rechercher. 
             <?php }else{
+                like();
+                unlike();
             $userData= getUserByUtil($_GET["user"]);
         if($userData===NULL){
             echo"L'utilisateur chercher n'existe pas";
@@ -32,6 +34,7 @@ require_once('header.php');
                     $newNbAbonée=getNbAbonnes($nomDePage)+1;
                     mysqli_query($connexion,"UPDATE user SET abonées=$newNbAbonée WHERE NomUtil='$nomDePage'");
                     unset($_POST["sub"]);
+                    header ("Location:profil.php?user=$nomDePage");
                 }
                 if(isset($_POST["Ban"])){
                     mysqli_query ($connexion, "UPDATE user set Ban=1 WHERE NomUtil='$nomDePage';");
@@ -43,6 +46,7 @@ require_once('header.php');
                     $newNbAbonée=getNbAbonnes($nomDePage)-1;
                     mysqli_query($connexion,"UPDATE user SET abonées=$newNbAbonée WHERE NomUtil='$nomDePage'");
                     unset($_POST["unsub"]);
+                    header ("Location:profil.php?user=$nomDePage");
                     }
 
 
@@ -69,7 +73,7 @@ require_once('header.php');
             $estAbonné="SELECT * FROM $nomDeTab WHERE user='$nomDePage';";
             $resultat = mysqli_query ($connexion, $estAbonné );//rajouter test
             $estAbonnée= mysqli_fetch_assoc ($resultat);
-            if( $estAbonnée==NULL){
+            if( $estAbonnée===NULL){
                 ?>
                 <form method="post">
             <button type="submit" name="sub">
@@ -95,7 +99,9 @@ require_once('header.php');
                 </button>
                 </form>
                 <?php
-            }}
+            }}if(isset($estAbonnée) && $estAbonnée===NULL && $userData["privé"]==='1' ){
+                echo"ce profil est privée vous ne pouvez pas le voir";
+            }else{
             $user=$_GET["user"];
             $req="SELECT * FROM publications WHERE NomUtil='$user'";
             $resultat = mysqli_query ($connexion, $req );
@@ -107,7 +113,7 @@ require_once('header.php');
                 echo'</div>';
             }
         }
-        }}
+        }}}
 
         ?>
 </h1>

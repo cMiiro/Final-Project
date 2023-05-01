@@ -24,7 +24,7 @@ $url=$_POST["url"];
 $description=$_POST["description"];
 $user=$_SESSION["user"];
 $dateActu=date("Y-m-d h:i:s");
-$AddPublication="INSERT INTO publications ( NomUtil , lienImage , DescriptionImage , dateActu ) VALUES('$user' , '$url' ,'$description' ,'$dateActu');";
+$AddPublication="INSERT INTO publications ( NomUtil , lienImage , DescriptionImage , dateActu, aime ) VALUES('$user' , '$url' ,'$description' ,'$dateActu',0);";
 $resultat = mysqli_query ($connexion, $AddPublication );
            if ($resultat === TRUE){
             echo"Votre publication à bien été envoyer";

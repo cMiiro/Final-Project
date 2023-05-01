@@ -40,6 +40,8 @@ if(isset($_POST["go"])){ //regarde si le formulaire à déjà été remplie dans
            if ($resultat === TRUE){
             $AddAbonnement="CREATE TABLE $user"."Abonnement(user VARCHAR(30))";
             $resultat = mysqli_query ($connexion, $AddAbonnement );
+            $AddLike="CREATE TABLE $user"."Like(NumeroId INT)";
+            $resultat = mysqli_query ($connexion, $AddLike );
               setcookie("user",$_POST["user"],time()+3600);/* si un nom à été enregistrer alors on se souviendras du nom d'utilisateur. De plus le cookies va rester pendant une heure et ensuite il faudras se reconnecter*/
               $_SESSION["user"]=$_POST["user"];
               header ('Location:accueil.php');}
