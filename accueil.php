@@ -26,7 +26,7 @@ require_once('header.php');
 <!-- Barre de recherche  -->
 <form action="accueil.php" method="post">
 <input type="search" name="recherche" list="ListeUser" placeholder="Valeur par defaut">
-<button type="submit">rechercher</button>
+<button type="submit" class="bouton">rechercher</button>
 </form>
     <?php 
     estModo($_SESSION["user"]);
