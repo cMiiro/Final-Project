@@ -85,6 +85,10 @@ button {
   position: relative;
   left: 37%;
 }
+button:hover {
+  background-color: rgb(104, 104, 104);
+  transition: 0.7s;
+}
 
 .profile a {
   color: lawngreen;
