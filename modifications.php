@@ -10,18 +10,38 @@ require_once("fonction.php"); //rajouter sécurité une personne non connecté n
 <body>
     <table border=1>
         <tr><th>   
-        <form action="modifications.php" method="post" autocomplete="on">
-         Modifier Photo De Profil : <input type="text" name="Newprofil" placeholder="URL"><br>
+        <form action="modifications.php" method="post" autocomplete="on" enctype="multipart/form-data">
+         Modifier Photo De Profil : <input type="file" name="Newprofil"><br>
          Nouvelle Description <br> <textarea name="NewDescription" rows="10" cols="70" ></textarea><br>
          Ancien Mot De Passe : <input type="text" name="OldMdp"><br>
          Nouveau Mot De Passe :<input type="text" name="Newmdp"><br>
          <button type="submit" name="private">devenir compte privé</button><br>
          <input type="submit" name="go"></form>
-        <?php if(isset($_POST['Newprofil']) && isset($_POST['NewDescription'])){
+        <?php if(isset($_POST["go"])){
             $user=$_SESSION["user"];
-            if($_POST["Newprofil"]!==''){
-                $newprofil=$_POST["Newprofil"];
-                $req="UPDATE user SET PhotoProfil='$newprofil' WHERE NomUtil='$user' "; //modifier le nom
+            $file = $_FILES['Newprofil'];
+            if($file['error'] !== UPLOAD_ERR_NO_FILE){
+
+    // récupère les informations de l'image
+    $fileName = $file['name'];
+    $fileTmpName = $file['tmp_name'];
+    $fileSize = $file['size'];
+    $fileError = $file['error'];
+    $fileType = $file['type'];
+
+    // vérifie que le fichier est une image
+    $fileExt = explode('.', $fileName);
+    $fileActualExt = strtolower(end($fileExt));
+    $allowed = array('jpg', 'jpeg', 'png', 'gif');
+    if(in_array($fileActualExt, $allowed)){
+        if($fileError === 0){
+            if($fileSize < 5000000){ // limite de 5 Mo
+                $fileNameNew = uniqid('', true).".".$fileActualExt;
+                $fileDestination = 'profil/'.$fileNameNew;
+                echo $fileDestination;
+                move_uploaded_file($fileTmpName, $fileDestination);
+                }}} 
+                $req="UPDATE user SET PhotoProfil='$fileDestination' WHERE NomUtil='$user' "; 
                 $resultat = mysqli_query ($connexion, $req );
             }
             if($_POST['NewDescription']!==''){

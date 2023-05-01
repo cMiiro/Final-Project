@@ -10,7 +10,7 @@ require_once("fonction.php");
 <body>
     <table border=1>
         <tr><th>
-        <form action="createPublication.php" method="post" autocomplete="on" enctype="multipart/form-data">
+        <form action="createPublication.php" method="post" enctype="multipart/form-data">
          Document à envoyer : <input type="file" name="image"><br>
          Description <br> <textarea name="description" rows="10" cols="80" >
 </textarea><br>
@@ -38,7 +38,7 @@ if(isset($_POST["go"])){
                 $fileNameNew = uniqid('', true).".".$fileActualExt;
                 $fileDestination = 'commentaire/'.$fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDestination);
-                echo "L'image a été téléversée avec succès.";
+                echo "La publication à été envoyer avec succès.";
             } else {
                 echo "Le fichier est trop volumineux.";
             }
