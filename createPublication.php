@@ -8,6 +8,7 @@ require_once("fonction.php");
 <link rel="stylesheet" href="connection.css">
 </head>
 <body>
+<a href="accueil.php"><img class="home" src="image/home22.png"></a>
     <table border=1>
         <tr><th>
         <form action="createPublication.php" method="post" enctype="multipart/form-data">
