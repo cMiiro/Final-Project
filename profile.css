@@ -92,9 +92,9 @@ button {
   color: lawngreen;
   font-family: serif;
   display: grid;
-  top: -5px;
-  position: relative;
-  left: -19px;
+  position: absolute;
+  top: auto;
+  right: 10px;
 }
 
 .profile img {
@@ -125,4 +125,10 @@ table {
   background-color: #418f5d;
   width: 99%;
   border-radius: 20px;
+}
+a {
+  text-decoration: none;
+}
+td {
+  position: relative;
 }

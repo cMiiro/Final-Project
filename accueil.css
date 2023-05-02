@@ -93,9 +93,9 @@ button:hover {
   color: lawngreen;
   font-family: serif;
   display: grid;
-  top: -5px;
-  position: relative;
-  left: -19px;
+  position: absolute;
+  top: auto;
+  right: 10px;
 }
 
 .profile img {
@@ -122,4 +122,7 @@ table {
   border-radius: 20px;
   position: relative;
   left: 37%;
+}
+a{
+  text-decoration: none;
 }
