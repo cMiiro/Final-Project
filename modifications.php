@@ -17,25 +17,27 @@ require_once("fonction.php"); //rajouter sécurité une personne non connecté n
          Nouveau Mot De Passe :<input type="text" name="Newmdp"><br>
          <button type="submit" name="private">devenir compte privé</button><br>
          <input type="submit" name="go"></form>
+        
+        
         <?php if(isset($_POST["go"])){
-            $user=$_SESSION["user"];
-            $file = $_FILES['Newprofil'];
-            if($file['error'] !== UPLOAD_ERR_NO_FILE){
 
-    // récupère les informations de l'image
-    $fileName = $file['name'];
-    $fileTmpName = $file['tmp_name'];
-    $fileSize = $file['size'];
-    $fileError = $file['error'];
-    $fileType = $file['type'];
+                 $user=$_SESSION["user"];
+                 $file = $_FILES['Newprofil'];
+                 if($file['error'] !== UPLOAD_ERR_NO_FILE){
 
-    // vérifie que le fichier est une image
-    $fileExt = explode('.', $fileName);
-    $fileActualExt = strtolower(end($fileExt));
-    $allowed = array('jpg', 'jpeg', 'png', 'gif');
-    if(in_array($fileActualExt, $allowed)){
-        if($fileError === 0){
-            if($fileSize < 5000000){ // limite de 5 Mo
+                 // récupère les informations de l'image
+                 $fileName = $file['name'];
+                 $fileTmpName = $file['tmp_name'];
+                 $fileSize = $file['size'];
+                 $fileError = $file['error'];
+
+                // vérifie que le fichier est une image
+                $fileExt = explode('.', $fileName);
+                $fileActualExt = strtolower(end($fileExt));
+                $Typeautorise = array('jpg', 'jpeg', 'png', 'gif');
+                if(in_array($fileActualExt, $Typeautorise)){
+                if($fileError === 0){
+                if($fileSize < 5000000){ // limite de 5 Mo
                 $fileNameNew = uniqid('', true).".".$fileActualExt;
                 $fileDestination = 'profil/'.$fileNameNew;
                 echo $fileDestination;

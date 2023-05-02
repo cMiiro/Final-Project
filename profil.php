@@ -103,7 +103,7 @@ require_once('header.php');
                 echo"ce profil est privée vous ne pouvez pas le voir";
             }else{
             $user=$_GET["user"];
-            $req="SELECT * FROM publications WHERE NomUtil='$user'";
+            $req="SELECT * FROM publications WHERE NomUtil='$user' ORDER BY id DESC";
             $resultat = mysqli_query ($connexion, $req );
             if($resultat){
                 echo '<div class="pub">';

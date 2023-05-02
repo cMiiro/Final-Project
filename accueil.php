@@ -30,13 +30,13 @@ require_once('header.php');
 </form>
     <?php 
     estModo($_SESSION["user"]);
-    $req="Select * from publications;";
+    $req="SELECT * FROM publications ORDER BY id DESC;";
     $resultat=mysqli_query ($connexion,$req);
     $user=$_SESSION["user"];
     if($resultat){
         while ($ligne=mysqli_fetch_assoc($resultat)){
         $NomUserPost=$ligne["NomUtil"];
-        $req="Select * from $user"."abonnement WHERE user='$NomUserPost';";
+        $req="SELECT * from $user"."abonnement WHERE user='$NomUserPost';";
         $estAbonne=mysqli_query ($connexion,$req);
         $verification= mysqli_fetch_assoc ($estAbonne); //regarde si l'utilisateur est abonné à celui qui à poster le commentaire
         if($verification!==NULL){//dans le cas ou il y a au moins un utilisateur du même nom que celui qui a posté le commentaire alors on affiche le commentaire(normalement il y en a au plus un).
