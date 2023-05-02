@@ -37,7 +37,9 @@ function afficheNomPhotoDeProfil($nomUtil,$taille){
 }
 
 function affichePublications($ligne){ 
-   echo "<table><tr><td><img src=\"";
+    $idPubli=$ligne["id"];
+    echo "<div id=\"$idPubli\">
+   <table><tr><td><img src=\"";
               echo $ligne['lienImage'];
               echo "\"width=500 height=375></td><td>"; 
               $UserName=$ligne['NomUtil'];
@@ -47,7 +49,6 @@ function affichePublications($ligne){
               echo $ligne['DescriptionImage'];
               echo"<br>";
               echo $ligne["aime"];
-              $idPubli=$ligne["id"];
               if(isInLike($idPubli)){
                 echo"<form method='post'>
                 <button type='submit' name='unlike' value=$idPubli>
@@ -60,7 +61,7 @@ function affichePublications($ligne){
               <img src=image/like.jpg width=35 height=35>
               </button>
                </form>";}
-             echo"</td></tr></table><br>";
+             echo"</td></tr></table></div><br>";
 }
 
 function like(){
@@ -75,6 +76,7 @@ function like(){
         $req="Update publications set aime=$nblike where id=$publication";
         mysqli_query($connexion,$req);
         mysqli_query ($connexion, "INSERT INTO $tableLike VALUES($publication)");
+        echo "<script>window.location.href = '#$publication';</script>";
     }
 }
 
@@ -90,6 +92,7 @@ function unlike(){              //sert à enlever le like on ne vas pas mettre d
         $req="Update publications set aime=$nblike where id=$publication";
         mysqli_query($connexion,$req);
         mysqli_query ($connexion, "DELETE FROM $tableLike WHERE NumeroId=$publication;");
+        echo "<script>window.location.href = '#$publication';</script>";
     }
 }
 
