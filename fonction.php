@@ -56,7 +56,7 @@ function affichePublications($ligne){
    <table><tr><td><a href=\"publication.php?com=$idPubli\"><img src=\"";
               echo $ligne['lienImage'];
               echo "\"width=500 height=375></a></td><td>"; 
-              echo "<a href=profil.php?user=$UserName>";
+              echo "<a href='profil.php?user=$UserName' class='user'>";
               afficheNomPhotoDeProfil($ligne['NomUtil'],30);
               echo"</a>";
               echo $ligne['DescriptionImage'];

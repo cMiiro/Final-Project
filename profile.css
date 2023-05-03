@@ -83,9 +83,9 @@ button {
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 20px;
-  position: relative;
-  left: -1%;
-  top: 62%;
+  position: absolute;
+  left: 41.5%;
+  top: 49%;
 }
 
 .profile a {
@@ -125,4 +125,33 @@ table {
   background-color: #418f5d;
   width: 99%;
   border-radius: 20px;
+}
+.buttons{
+  position: relative;
+  left: 0%;
+  height: 38px;
+}
+input[type="text"] {
+  position: relative;
+  left: 0%;
+}
+
+  .comment tr:nth-child(odd) {
+    background-color: #008732;
+  }
+  
+  .comment tr:nth-child(even) {
+    background-color: #65c689;
+  }
+  
+.user{
+  left: 41.5%;
+  position: absolute;
+  top: 33%;
+}
+
+#text{
+  left: 41.5%;
+  position: absolute;
+  top: 33%;
 }

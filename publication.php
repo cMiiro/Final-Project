@@ -28,21 +28,27 @@ $publication=mysqli_fetch_assoc ($publication);
 affichePublications($publication);
 $commentaires=mysqli_query($connexion,"SELECT * FROM commentaire WHERE idPublication=$idPublication");
 ?>
-<table><tr><td>
+<tr><td>
 <form method="post">
 <input type="text" name="commentaire" size="60" placeholder="Voulez vous commentez ?">
-<button type="submit" name="private">Poster</button>
+<button class="buttons" name="private">Poster</button>
 </form>
 </td></tr>
+<div class="comment">
+    <table>
+        <?php
+        while ($ligne=mysqli_fetch_assoc($commentaires)){
+            echo"<tr><td>";
+            afficheNomPhotoDeProfil($ligne["NomUtil"],45);
+            echo "<br>".$ligne["TexteCom"]."<br></td></tr>";
+        }
+        ?>
+    </table>
+</div>
+
 <?php
-while ($ligne=mysqli_fetch_assoc($commentaires)){
-echo"<tr><td>";
-afficheNomPhotoDeProfil($ligne["NomUtil"],45);
-echo "<br>".$ligne["TexteCom"]."<br></td></tr>";
-}
-echo"</table>";
 }else{
-    echo "il n'y a pas de publications à voire";
+    echo "il n'y a pas de publications à voir";
 }
 ?>
 </body>
