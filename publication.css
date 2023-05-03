@@ -84,8 +84,8 @@ header {
     cursor: pointer;
     border-radius: 20px;
     position: absolute;
-    left: 41.5%;
-    top: 49%;
+    left: -9.5%;
+    top: 200%;
   }
   
   .profile a {
@@ -145,13 +145,16 @@ header {
     }
     
   .user{
-    left: 41.5%;
+    left: 2.5%;
     position: absolute;
-    top: 33%;
+    top: -145%;
   }
   
-  #text{
-    left: 41.5%;
+  .text{
     position: absolute;
-    top: 33%;
+    left: 41.5%;
+    top:42%
   }
+
+
+  

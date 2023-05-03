@@ -52,30 +52,30 @@ function affichePublications($ligne){
         }   
     }
     if($affiche===true){
-    echo "<div id=\"$idPubli\">
-   <table><tr><td><a href=\"publication.php?com=$idPubli\"><img src=\"";
-              echo $ligne['lienImage'];
-              echo "\"width=500 height=375></a></td><td>"; 
-              echo "<a href='profil.php?user=$UserName' class='user'>";
-              afficheNomPhotoDeProfil($ligne['NomUtil'],30);
-              echo"</a>";
-              echo $ligne['DescriptionImage'];
-              echo"<br>";
-              echo $ligne["aime"];
-              if(isInLike($idPubli)){
-                echo"<form method='post'>
-                <button type='submit' name='unlike' value=$idPubli>
-                <img src=image/like2.jpg width=35 height=35>
-                </button>
-                 </form>";
-              }else{
-              echo"<form method='post'>
-              <button type='submit' name='like' value=$idPubli>
-              <img src=image/like.jpg width=35 height=35>
-              </button>
-               </form>";}
-             echo"</td></tr></table></div><br>";
-}}
+        echo "<div id=\"$idPubli\">
+       <table><tr><td><a href=\"publication.php?com=$idPubli\"><img src=\"";
+                  echo $ligne['lienImage'];
+                  echo "\"width=500 height=375></a></td><td class=\"text\">"; 
+                  echo "<a href='profil.php?user=$UserName' class='user'>";
+                  afficheNomPhotoDeProfil($ligne['NomUtil'],30);
+                  echo"</a>";
+                  echo $ligne['DescriptionImage'];
+                  echo"<br>";
+                  echo $ligne["aime"];
+                  if(isInLike($idPubli)){
+                    echo"<form method='post'>
+                    <button type='submit' name='unlike' value=$idPubli>
+                    <img src=image/like2.jpg width=35 height=35>
+                    </button>
+                     </form>";
+                  }else{
+                  echo"<form method='post'>
+                  <button type='submit' name='like' value=$idPubli>
+                  <img src=image/like.jpg width=35 height=35>
+                  </button>
+                   </form>";}
+                 echo"</td></tr></table></div><br>";
+    }}
 
 function like(){
     if(isset($_POST['like'])){
