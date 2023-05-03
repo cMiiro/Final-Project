@@ -14,7 +14,7 @@ require_once("fonction.php");
          Document à envoyer : <input type="file" name="image"><br>
          Description <br> <textarea name="description" rows="10" cols="80" >
 </textarea><br>
-
+Voulez vous une publications privé :<input type="checkbox" name="privé">
         <input type="submit" name="go">
         </form>      
   <p> <?php
@@ -48,11 +48,16 @@ if(isset($_POST["go"])){
     } else {
         echo "Ce type de fichier n'est pas autorisé.";
     }
+    if(isset($_POST["privé"])){
+  $privé=1;
+    }else{
+        $privé=0;
+    }
 $description=$_POST["description"];
 $description=addslashes($description);
 $user=$_SESSION["user"];
 $dateActu=date("Y-m-d h:i:s");
-$AddPublication="INSERT INTO publications ( NomUtil , lienImage , DescriptionImage , dateActu, aime ) VALUES('$user' , '$fileDestination' ,'$description' ,'$dateActu',0);";
+$AddPublication="INSERT INTO publications ( NomUtil , lienImage , DescriptionImage , dateActu, aime ,privé ) VALUES('$user' , '$fileDestination' ,'$description' ,'$dateActu',0,$privé);";
 $resultat = mysqli_query ($connexion, $AddPublication );
            if ($resultat === TRUE){
             echo"Votre publication à bien été envoyer";
@@ -63,10 +68,8 @@ $resultat = mysqli_query ($connexion, $AddPublication );
             unset($_POST["go"]);
             unset($_POST["description"]);
            }else{
-            echo"il y a eu un probléme lors de la publication.Merci de réessayer";
-           }
-}else{
-    echo "il y un probleme il n'y a pas d'image ou la description n'est pas rempli";
+            echo "il y un probleme il n'y a pas d'image ou la description n'est pas rempli";
+        }
 }
 
 
