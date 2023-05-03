@@ -135,3 +135,10 @@ input[type="text"] {
   position: relative;
   left: 0%;
 }
+
+a {
+  text-decoration: none;
+}
+td {
+  position: relative;
+}

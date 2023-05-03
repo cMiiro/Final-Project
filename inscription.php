@@ -8,6 +8,7 @@ require_once("fonction.php");
 <link rel="stylesheet" href="inscription.css">
 </head>
 <body>
+<a href="accueil.php"><img class="home" src="image/home22.png"></a> 
 <div class="primary">
    <h1> Bienvenue!<h1></div>
    <div class="secondary">

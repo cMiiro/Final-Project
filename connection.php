@@ -7,6 +7,7 @@ require_once("fonction.php");
 <meta charset="ufr-8">
 <link rel="stylesheet" href="connection.css">
 </head>
+<a href="accueil.php"><img class="home" src="image/home22.png"></a>
 <div class="anime"></div>
 <h1>Touch Some Grass</h1>
 <h2>Avec Touch Some Grass, vous allez être fasciner par l'herbe VERTE</h2>
