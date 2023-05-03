@@ -8,7 +8,6 @@ require_once("fonction.php"); //rajouter sécurité une personne non connecté n
 <link rel="stylesheet" href="inscription.css">
 </head>
 <body>
-<a href="accueil.php"><img class="home" src="image/home22.png"></a>
     <table border=1>
         <tr><th>   
         <form action="modifications.php" method="post" autocomplete="on" enctype="multipart/form-data">

@@ -8,7 +8,6 @@ require_once("fonction.php");
 <link rel="stylesheet" href="inscription.css">
 </head>
 <body>
-<a href="accueil.php"><img class="home" src="image/home22.png"></a> 
 <div class="primary">
    <h1> Bienvenue!<h1></div>
    <div class="secondary">
@@ -21,7 +20,7 @@ if(isset($_POST["go"])){ //regarde si le formulaire à déjà été remplie dans
     ?> 
  <p class="formulaire">Nom :<input type="text" size="30" name="nom" value=<?php echo $_POST['nom']?>><br>
  Prénom :<input type="text" size="30" name="prenom" value=<?php echo $_POST['prenom']?>><br>
- Nom d'Utilisateur :<input type="text" size="30" name="user" value=<?php echo $_POST['user']?>><br> 
+ Nom d'Utilisateur :<input type="text" size="15" name="user" value=<?php echo $_POST['user']?>><br> 
  Mot de Passe :<input type="password" size="30" name="mdp"><br>
  Vérification Mot de Passe :<input type="password" size="30" name="vmdp"><br></p>
  <p class="erreur">

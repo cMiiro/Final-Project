@@ -5,7 +5,7 @@ CREATE DATABASE tsg_base CHARACTER SET 'utf8';
 CREATE TABLE user(
     Nom VARCHAR(30),
     Prenom VARCHAR(30),
-    NomUtil VARCHAR(30),
+    NomUtil VARCHAR(15),
     mdp VARCHAR(30),
     Description VARCHAR(160), 
     PhotoProfil VARCHAR(160),
@@ -27,15 +27,14 @@ CREATE TABLE user(
      CREATE TABLE commentaire(
          NomUtil varchar(30),
          TexteCom varchar(60),
-         idCom INT);
+         idPublication INT);
 
 
 
     Truc à FAIRE
 
-    -meilleur bonton d'abonnement
-    -rendre le tout plus joli
-    -ajouter nombre de like et de commentaires
+    -ajouter la possibilité de suprimer ses commentaires
     -ajouter les fonctionalité des modos
-    -ajouter compte privées
     -ajouter signalement
+    -commentaire privé
+    -petit truc pour se déconécté ou modifier ses info

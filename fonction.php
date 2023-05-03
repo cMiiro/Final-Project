@@ -39,9 +39,9 @@ function afficheNomPhotoDeProfil($nomUtil,$taille){
 function affichePublications($ligne){ 
     $idPubli=$ligne["id"];
     echo "<div id=\"$idPubli\">
-   <table><tr><td><img src=\"";
+   <table><tr><td><a href=\"publication.php?com=$idPubli\"><img src=\"";
               echo $ligne['lienImage'];
-              echo "\"width=500 height=375></td><td>"; 
+              echo "\"width=500 height=375></a></td><td>"; 
               $UserName=$ligne['NomUtil'];
               echo "<a href=profil.php?user=$UserName>";
               afficheNomPhotoDeProfil($ligne['NomUtil'],30);
@@ -76,11 +76,13 @@ function like(){
         $req="Update publications set aime=$nblike where id=$publication";
         mysqli_query($connexion,$req);
         mysqli_query ($connexion, "INSERT INTO $tableLike VALUES($publication)");
+        unset($_POST['unlike']);
+        header("Refresh:0");//refresh la page 
         echo "<script>window.location.href = '#$publication';</script>";
     }
 }
 
-function unlike(){              //sert à enlever le like on ne vas pas mettre de dislike dans notre site internet on déjà des commentaires.
+function unlike(){              //sert à enlever le like.
     if(isset($_POST['unlike'])){
         global $connexion;
         $tableLike=$_SESSION["user"]."like";
@@ -92,6 +94,8 @@ function unlike(){              //sert à enlever le like on ne vas pas mettre d
         $req="Update publications set aime=$nblike where id=$publication";
         mysqli_query($connexion,$req);
         mysqli_query ($connexion, "DELETE FROM $tableLike WHERE NumeroId=$publication;");
+        unset($_POST['unlike']);
+        header("Refresh:0");//refresh la page 
         echo "<script>window.location.href = '#$publication';</script>";
     }
 }

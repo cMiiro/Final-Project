@@ -8,7 +8,6 @@ require_once("fonction.php");
 <link rel="stylesheet" href="connection.css">
 </head>
 <body>
-<a href="accueil.php"><img class="home" src="image/home22.png"></a>
     <table border=1>
         <tr><th>
         <form action="createPublication.php" method="post" enctype="multipart/form-data">
@@ -50,6 +49,7 @@ if(isset($_POST["go"])){
         echo "Ce type de fichier n'est pas autorisé.";
     }
 $description=$_POST["description"];
+$description=addslashes($description);
 $user=$_SESSION["user"];
 $dateActu=date("Y-m-d h:i:s");
 $AddPublication="INSERT INTO publications ( NomUtil , lienImage , DescriptionImage , dateActu, aime ) VALUES('$user' , '$fileDestination' ,'$description' ,'$dateActu',0);";

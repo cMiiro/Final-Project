@@ -7,12 +7,10 @@ require_once("fonction.php");
 <meta charset="ufr-8">
 <link rel="stylesheet" href="connection.css">
 </head>
-<body>
-<a href="accueil.php"><img class="home" src="image/home22.png"></a> 
 <div class="anime"></div>
 <h1>Touch Some Grass</h1>
 <h2>Avec Touch Some Grass, vous allez être fasciner par l'herbe VERTE</h2>
-    <table border="1">
+<body><table border="1">
     <tr><th>
     <form action="connection.php" method="post">
     <?php
@@ -43,7 +41,7 @@ if ($user===null){
 }
 ?></p>
 <?php }else{ ?>
-Nom d'utilisateur :<input type="text" size="30" name="user" placeholder="Votre nom"><br>
+Nom d'utilisateur :<input type="text" size="15" name="user" placeholder="Votre nom"><br>
 Mot de Passe :<input type="password" size="30" name="mdp">
 <?php
 } ?>
