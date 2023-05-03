@@ -38,11 +38,24 @@ function afficheNomPhotoDeProfil($nomUtil,$taille){
 
 function affichePublications($ligne){ 
     $idPubli=$ligne["id"];
+    $affiche=true;
+    $UserName=$ligne['NomUtil'];
+    $user=$_SESSION["user"];
+    if($ligne["privé"]==='1'&& $user !== $UserName ){
+        echo "test";
+        global $connexion;
+        $req="SELECT * from $user"."abonnement WHERE user='$UserName';";
+        $estAbonne=mysqli_query ($connexion,$req);
+        $verification= mysqli_fetch_assoc ($estAbonne);
+        if($verification===NULL){
+            $affiche=false;
+        }   
+    }
+    if($affiche===true){
     echo "<div id=\"$idPubli\">
    <table><tr><td><a href=\"publication.php?com=$idPubli\"><img src=\"";
               echo $ligne['lienImage'];
               echo "\"width=500 height=375></a></td><td>"; 
-              $UserName=$ligne['NomUtil'];
               echo "<a href=profil.php?user=$UserName>";
               afficheNomPhotoDeProfil($ligne['NomUtil'],30);
               echo"</a>";
@@ -62,7 +75,7 @@ function affichePublications($ligne){
               </button>
                </form>";}
              echo"</td></tr></table></div><br>";
-}
+}}
 
 function like(){
     if(isset($_POST['like'])){
