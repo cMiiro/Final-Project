@@ -83,9 +83,8 @@ header {
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 20px;
-    position: absolute;
-    left: -9.5%;
-    top: 200%;
+    position: relative;
+    left: -1.5%;
   }
   
   .profile a {
@@ -145,9 +144,9 @@ header {
     }
     
   .user{
-    left: 2.5%;
+    left: -0.5%;
     position: absolute;
-    top: -145%;
+    top: -62%;
   }
   
   .text{
