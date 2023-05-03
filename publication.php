@@ -27,12 +27,13 @@ $publication=mysqli_query($connexion,"SELECT * FROM publications WHERE id=$idPub
 $publication=mysqli_fetch_assoc ($publication);
 affichePublications($publication);
 $commentaires=mysqli_query($connexion,"SELECT * FROM commentaire WHERE idPublication=$idPublication");
-echo "<table>";
 ?>
+<table><tr><td>
 <form method="post">
 <input type="text" name="commentaire" size="60" placeholder="Voulez vous commentez ?">
 <button type="submit" name="private">Poster</button>
 </form>
+</td></tr>
 <?php
 while ($ligne=mysqli_fetch_assoc($commentaires)){
 echo"<tr><td>";
