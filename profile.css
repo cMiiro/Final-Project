@@ -135,23 +135,3 @@ input[type="text"] {
   position: relative;
   left: 0%;
 }
-
-  .comment tr:nth-child(odd) {
-    background-color: #008732;
-  }
-  
-  .comment tr:nth-child(even) {
-    background-color: #65c689;
-  }
-  
-.user{
-  left: 41.5%;
-  position: absolute;
-  top: 33%;
-}
-
-#text{
-  left: 41.5%;
-  position: absolute;
-  top: 33%;
-}
