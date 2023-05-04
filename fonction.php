@@ -60,7 +60,7 @@ function affichePublications($ligne,$modo){
                   if($modo===true){
                     echo"<form method='post'>
                     <button type='submit' name='delete' value=$idPubli>
-                    <img src=image/croix.webp width=20 height=20>
+                    <img src=image/croix.png width=20 height=20>
                     </button>
                      </form>";
                 }else{
@@ -172,9 +172,9 @@ function affichePublications2($idPublication){
     $publication=mysqli_fetch_assoc ($publication);
     echo"<table><tr><td><img src=\"";
     echo $publication['lienImage'];
-    echo "\"width=700 height=375></a></td><td class=\"text\"><h1 class=\"profil\"";
+    echo "\"width=700 height=375></a></td><td class=\"text\">";
     afficheNomPhotoDeProfil($publication['NomUtil'],30);
     echo "</h1><h1 class=\"description\">".$publication["DescriptionImage"];
-    echo"</h1></td></tr></table>";
+    echo"</td></tr></table>";
 }
 ?>
