@@ -17,8 +17,7 @@ if (isset($_SESSION["user"])){
      echo"</a>";
         }else{
         echo"<a href=\"connection.php\">Se connecter</a>";
-        return false;
-    }}return true;
+    }}
 }
 
 function getUserByUtil($nomUtil){
@@ -54,7 +53,7 @@ function affichePublications($ligne,$modo){
         echo "<div id=\"$idPubli\">
        <table><tr><td><a href=\"publication.php?com=$idPubli\"><img src=\"";
                   echo $ligne['lienImage'];
-                  echo "\"width=500 height=375></a></td><td class=\"text\">"; 
+                  echo "\"width=700 height=375></a></td><td class=\"text\">"; 
                   echo "<a href='profil.php?user=$UserName' class='user'>";
                   afficheNomPhotoDeProfil($ligne['NomUtil'],30);
                   echo"</a>";
@@ -71,11 +70,11 @@ function affichePublications($ligne,$modo){
                     </button>
                      </form>";
                 }
-                  echo "<p class=\"description\">".$ligne['DescriptionImage']."</p>";
-                  echo"<br>";
-                  echo "<p class=\"like\">".$ligne["aime"]."</p>";
-                  if(isInLike($idPubli)){
-                    echo"<form method='post'>
+                echo "<h1 class=\"description\">".$ligne['DescriptionImage']."</h1>";
+                echo"<br>";
+                echo "<p class=\"like\">".$ligne["aime"]."</p>";
+                if(isInLike($idPubli)){
+                  echo"<form method='post'>
                     <button type='submit' name='unlike' value=$idPubli>
                     <img src=image/like2.jpg width=35 height=35>
                     </button>
@@ -173,7 +172,7 @@ function affichePublications2($idPublication){
     $publication=mysqli_fetch_assoc ($publication);
     echo"<table><tr><td><img src=\"";
     echo $publication['lienImage'];
-    echo "\"width=500 height=375></a></td><td class=\"text\">";
+    echo "\"width=700 height=375></a></td><td class=\"text\">";
     afficheNomPhotoDeProfil($publication['NomUtil'],30);
     echo $publication["DescriptionImage"];
     echo"</td></tr></table>";

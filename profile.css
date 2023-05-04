@@ -114,16 +114,10 @@ button:hover {
   transition: 0.7s;
 }
 
-h1 {
-  text-align: center;
-  margin-top: 50px;
-  color: chartreuse;
-}
-
 table {
   border: solid;
   background-color: #418f5d;
-  width: 99%;
+  width: 100%;
   border-radius: 20px;
 }
 .buttons{
@@ -138,7 +132,52 @@ input[type="text"] {
 
 a {
   text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
 }
 td {
   position: relative;
 }
+a.user {
+  position: relative;
+  top: -78px;
+  left: -340px;
+}
+
+button[name="like"] {
+  position: relative;
+  top: 43px;
+  left: -340px;
+}
+
+button[name="signal"]{
+  position: relative;
+  top:-120px;
+    left: 58px;
+}
+
+h1.description {
+  position: relative;
+  left: -75%;
+}
+
+p.like {
+  position: absolute;
+  left: -287px;
+}
+
+h1.Description {
+  position: absolute;
+  top: 175px;
+  color: limegreen;
+  font-size: 20px;
+  left: 108px;
+}
+
+h1.name {
+  position: relative;
+  top: -4px;
+  display: flex;
+  color: limegreen;
+}
+

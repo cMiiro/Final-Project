@@ -8,7 +8,6 @@ require_once('header.php');
      <meta charset="ufr-8"/>
     </head>
     <body>
-      <h1>
         <?php
         if(!isset($_GET["user"])){
             ?>
@@ -57,7 +56,7 @@ require_once('header.php');
 
             echo"<h1 class=\"name\">";      
             afficheNomPhotoDeProfil($_GET["user"],100);
-            echo"<\h1>";
+            echo"</h1>";
             if($userData["Ban"]==="1"){
                 echo"<h1 class=\"Description\">Cette utilisateur a été bani(e).<br> Son contenu ne peux plus être visible.</h1><br>";
                 if(estModo($_SESSION["user"])===true){
@@ -121,6 +120,5 @@ require_once('header.php');
         }}}
 
         ?>
-</h1>
 </body>
 </html>
