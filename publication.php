@@ -12,6 +12,9 @@ require_once('header.php');
 //on vérifie s'il y a des like ajouter ou suprimmer.
 like();
 unlike();
+signal();
+delete();
+$modo=estmodo($_SESSION["user"]);
 //on vérifie s'il y a au moins un commentaire à afficher.
 if(isset($_GET["com"])){
     $idPublication=$_GET["com"];
@@ -25,7 +28,7 @@ if(isset($_GET["com"])){
 }}
 $publication=mysqli_query($connexion,"SELECT * FROM publications WHERE id=$idPublication");
 $publication=mysqli_fetch_assoc ($publication);
-affichePublications($publication);
+affichePublications($publication,$modo);
 $commentaires=mysqli_query($connexion,"SELECT * FROM commentaire WHERE idPublication=$idPublication");
 ?>
 <tr><td>

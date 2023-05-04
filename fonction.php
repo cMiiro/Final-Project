@@ -23,7 +23,7 @@ if (isset($_SESSION["user"])){
 function getUserByUtil($nomUtil){
     global $connexion;
     $selectUser = "SELECT * FROM user WHERE NomUtil='".$nomUtil."'" ;
-    $utilisateur = mysqli_query ($connexion, $selectUser);//permet d'avoir tous les utilisateur avec le nom d'utilisateur et donc toute ces information;
+    $utilisateur = mysqli_query ($connexion, $selectUser);
     $user= mysqli_fetch_assoc ($utilisateur) ;
     return $user;
 }
@@ -33,16 +33,14 @@ function afficheNomPhotoDeProfil($nomUtil,$taille){
        $photo=$userData["PhotoProfil"];
        echo "<img src=\"$photo\" width=\"$taille\" height=\"$taille\">" ; 
        echo $userData["NomUtil"];
-       echo "<br>";
 }
 
-function affichePublications($ligne){ 
+function affichePublications($ligne,$modo){ 
     $idPubli=$ligne["id"];
     $affiche=true;
     $UserName=$ligne['NomUtil'];
     $user=$_SESSION["user"];
     if($ligne["privé"]==='1'&& $user !== $UserName ){
-        echo "test";
         global $connexion;
         $req="SELECT * from $user"."abonnement WHERE user='$UserName';";
         $estAbonne=mysqli_query ($connexion,$req);
@@ -59,6 +57,19 @@ function affichePublications($ligne){
                   echo "<a href='profil.php?user=$UserName' class='user'>";
                   afficheNomPhotoDeProfil($ligne['NomUtil'],30);
                   echo"</a>";
+                  if($modo===true){
+                    echo"<form method='post'>
+                    <button type='submit' name='delete' value=$idPubli>
+                    <img src=image/croix.webp width=20 height=20>
+                    </button>
+                     </form>";
+                }else{
+                    echo"<form method='post'>
+                    <button type='submit' name='signal' value=$idPubli>
+                    <img src=image/signalement.png width=20 height=20>
+                    </button>
+                     </form>";
+                }
                   echo $ligne['DescriptionImage'];
                   echo"<br>";
                   echo $ligne["aime"];
@@ -141,5 +152,29 @@ function estModo($user){
 function getNbAbonnes($user){
     $userData=getUserByUtil($user);
     return $userData["abonées"];
+}
+
+function signal(){
+    if(isset($_POST["signal"])){
+        $go=$_POST["signal"];
+     header("Location:signalement.php?com=$go");
+    }
+}
+function delete(){
+    if(isset($_POST["delete"])){
+        $go=$_POST["delete"];
+     header("Location:supprimer.php?com=$go");
+    }
+}
+function affichePublications2($idPublication){
+    global $connexion;
+    $publication=mysqli_query($connexion,"SELECT * FROM publications WHERE id=$idPublication");
+    $publication=mysqli_fetch_assoc ($publication);
+    echo"<table><tr><td><img src=\"";
+    echo $publication['lienImage'];
+    echo "\"width=500 height=375></a></td><td class=\"text\">";
+    afficheNomPhotoDeProfil($publication['NomUtil'],30);
+    echo $publication["DescriptionImage"];
+    echo"</td></tr></table>";
 }
 ?>

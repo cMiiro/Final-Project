@@ -29,12 +29,13 @@ CREATE TABLE user(
          TexteCom varchar(60),
          idPublication INT);
 
+     CREATE TABLE signalement(
+        utilSignal varchar(30),
+        idPublication INT);
+
 
 
     Truc à FAIRE
 
     -ajouter la possibilité de suprimer ses commentaires
-    -ajouter les fonctionalité des modos
-    -ajouter signalement
-    -commentaire privé
     -petit truc pour se déconécté ou modifier ses info

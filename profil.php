@@ -16,11 +16,15 @@ require_once('header.php');
             <?php }else{
                 like();
                 unlike();
+                signal();
+                delete();
+                $modo=estmodo($_SESSION["user"]);
             $userData= getUserByUtil($_GET["user"]);
         if($userData===NULL){
             echo"L'utilisateur chercher n'existe pas";
         }else{
-              //Toute les modifications des profils grâce aux bouton à disposition seront placé là
+              
+            //Toute les modifications des profils grâce aux bouton à disposition seront placé là
               $nomDeTab=$_SESSION["user"]."Abonnement";
               $nomDePage=$_GET["user"];  
               if(isset($_POST["Unban"])){
@@ -108,7 +112,7 @@ require_once('header.php');
             if($resultat){
                 echo '<div class="pub">';
                 while ($ligne=mysqli_fetch_assoc($resultat)){
-                affichePublications($ligne);
+                affichePublications($ligne,$modo);
                 }
                 echo'</div>';
             }
