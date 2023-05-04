@@ -172,9 +172,9 @@ function affichePublications2($idPublication){
     $publication=mysqli_fetch_assoc ($publication);
     echo"<table><tr><td><img src=\"";
     echo $publication['lienImage'];
-    echo "\"width=700 height=375></a></td><td class=\"text\">";
+    echo "\"width=700 height=375></a></td><td class=\"text\"><h1 class=\"profil\"";
     afficheNomPhotoDeProfil($publication['NomUtil'],30);
-    echo $publication["DescriptionImage"];
-    echo"</td></tr></table>";
+    echo "</h1><h1 class=\"description\">".$publication["DescriptionImage"];
+    echo"</h1></td></tr></table>";
 }
 ?>
