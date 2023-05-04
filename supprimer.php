@@ -17,10 +17,20 @@ if(estModo($_SESSION["user"])===true){
         mysqli_query($connexion,"DELETE FROM publications WHERE id=$id");
         header("location:accueil.php");
     }
+    if(isset($_POST['unsignal'])){
+        $id=$_GET["com"];
+        mysqli_query($connexion,"DELETE FROM signalement WHERE idPublication=$id");
+        header("location:accueil.php");
+    }
     affichePublications2($_GET["com"]);
 echo "<form method='post'>
                     <button type='submit' name='delete'>
                     Voulez vraiment suprimer ce commentaire
+                    </button>
+                     </form>";
+echo "<form method='post'>
+                    <button type='submit' name='unsignal'>
+                    Retirer de la liste des signalement
                     </button>
                      </form>";
 }else{
