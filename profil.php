@@ -65,12 +65,12 @@ require_once('header.php');
                     <button type="submit" name="Unban">
                     Debannir
                     </button>
-                    </form><h1>
+                    </form>
                     <?php
                     }}else{
-                        echo "<br>Cette utilisateur a ".getNbAbonnes($nomDePage)." abonné(s).<br></h1>";
+                        echo "<h1 class=\"Description\"><br>Cette utilisateur a ".getNbAbonnes($nomDePage)." abonné(s).<br>";
                         echo $userData["Description"];
-            echo "<br>";
+            echo "<br></h1>";
             if($_SESSION["user"]===$_GET["user"]){
             echo"<a href='modifications.php'>modification profil</a><br>";
             }else{
