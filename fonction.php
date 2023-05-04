@@ -17,7 +17,8 @@ if (isset($_SESSION["user"])){
      echo"</a>";
         }else{
         echo"<a href=\"connection.php\">Se connecter</a>";
-    }}
+        return false;
+    }}return true;
 }
 
 function getUserByUtil($nomUtil){
@@ -70,9 +71,9 @@ function affichePublications($ligne,$modo){
                     </button>
                      </form>";
                 }
-                  echo $ligne['DescriptionImage'];
+                  echo "<p class=\"description\">".$ligne['DescriptionImage']."</p>";
                   echo"<br>";
-                  echo $ligne["aime"];
+                  echo "<p class=\"like\">".$ligne["aime"]."</p>";
                   if(isInLike($idPubli)){
                     echo"<form method='post'>
                     <button type='submit' name='unlike' value=$idPubli>
