@@ -58,17 +58,17 @@ require_once('header.php');
                       
             afficheNomPhotoDeProfil($_GET["user"],100);
             if($userData["Ban"]==="1"){
-                echo"Cette utilisateur a été bani(e).<br> Son contenu ne peux plus être visible.<br>";
+                echo"<h1>Cette utilisateur a été bani(e).<br> Son contenu ne peux plus être visible.</h1><br>";
                 if(estModo($_SESSION["user"])===true){
                     ?>
                     <form method="post">
                     <button type="submit" name="Unban">
                     Debannir
                     </button>
-                    </form>
+                    </form><h1>
                     <?php
                     }}else{
-                        echo "Cette utilisateur a ".getNbAbonnes($nomDePage)." abonné(s).<br>";
+                        echo "<br>Cette utilisateur a ".getNbAbonnes($nomDePage)." abonné(s).<br></h1>";
                         echo $userData["Description"];
             echo "<br>";
             if($_SESSION["user"]===$_GET["user"]){
