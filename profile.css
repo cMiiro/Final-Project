@@ -120,7 +120,7 @@ table {
   width: 100%;
   border-radius: 20px;
 }
-.buttons{
+.buttons {
   position: relative;
   left: 0%;
   height: 38px;
@@ -150,10 +150,10 @@ button[name="like"] {
   left: -340px;
 }
 
-button[name="signal"]{
+button[name="signal"] {
   position: relative;
-  top:-120px;
-    left: 58px;
+  top: -120px;
+  left: 58px;
 }
 
 h1.description {
@@ -181,3 +181,8 @@ h1.name {
   color: limegreen;
 }
 
+button[name="delete"] {
+  position: relative;
+  top: -120px;
+  left: 58px;
+}

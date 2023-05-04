@@ -155,3 +155,9 @@ p.like {
   position: absolute;
   left: 61%;
 }
+
+button[name="delete"]{
+  position: relative;
+  top:-103px;
+  left: 58px;
+}

@@ -4,7 +4,7 @@ require_once('header.php');
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="publication.css">
+    <link rel="stylesheet" href="supprimer.css">
 <meta charset="ufr-8">
     </head>
 <body>
