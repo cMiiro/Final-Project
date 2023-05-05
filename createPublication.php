@@ -9,7 +9,10 @@ require_once("fonction.php");
 </head>
 <body>
 <a href="accueil.php"><img class="home" src="image/home22.png"></a>
-    <table border=1>
+<?php $user=getUserByUtil($_SESSION["user"]);
+if($user["Ban"]==0){ 
+?>   
+<table border=1>
         <tr><th>
         <form action="createPublication.php" method="post" enctype="multipart/form-data">
          Document à envoyer : <input type="file" name="image"><br>
@@ -70,6 +73,8 @@ $resultat = mysqli_query ($connexion, $AddPublication );
            }else{
             echo "il y un probleme il n'y a pas d'image ou la description n'est pas rempli";
         }
+}}else{
+    echo "<h1>Vous êtes banni,vous ne pouvez donc plus faire des publications.</h1>";
 }
 
 

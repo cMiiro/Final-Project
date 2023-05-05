@@ -45,7 +45,7 @@ function affichePublications($ligne,$modo){
         $req="SELECT * from $user"."abonnement WHERE user='$UserName';";
         $estAbonne=mysqli_query ($connexion,$req);
         $verification= mysqli_fetch_assoc ($estAbonne);
-        if($verification===NULL){
+        if($verification===NULL && $modo==false){
             $affiche=false;
         }   
     }

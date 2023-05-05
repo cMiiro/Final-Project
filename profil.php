@@ -79,6 +79,7 @@ require_once('header.php');
                     <img src=image/boutondeco.jpg width=50 height=50>
                     </button>
                      </form>";
+                     $estAbonne="yes";// je veux juste qu'il ne soit pas null pour après
             }else{
             $estAbonne="SELECT * FROM $nomDeTab WHERE user='$nomDePage';";
             $resultat = mysqli_query ($connexion, $estAbonne );//rajouter test
