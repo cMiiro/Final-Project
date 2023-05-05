@@ -141,12 +141,12 @@ header {
   .text{
     position: absolute;
     left: 58.5%;
-    top: 21%;
+    top: 23%
   }
 h1.description{
-    position: absolute;
-    top: 119px;
-    left: 193px;
+  position: absolute;
+  top: 119px;
+  font-size: 15px;
 }
 button[name="unsignal"]{
     position: relative;

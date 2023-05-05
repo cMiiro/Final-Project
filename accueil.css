@@ -130,34 +130,42 @@ a{
 
 a.user{
   position: relative;
-  top: -60px;
+  top: -74px;
   left: -380px;
 }
 
 button[name="like"] {
   position: relative;
-  top: 43px;
+  top: 79px;
   left: -380px;
 }
 
 button[name="signal"]{
   position: relative;
-  top:-103px;
+  top:-113px;
     left: 58px;
 }
 
 h1.description {
-  position: relative;
-  left: -132%;
+  position: absolute;
+  left: 723px;
+  font-size: 15px;
 }
 
 p.like {
-  position: absolute;
-  left: 61%;
+  position: relative;
+  left: -343px;
+  top: 97px;
 }
 
 button[name="delete"]{
   position: relative;
   top:-103px;
   left: 58px;
+}
+
+button[name="unlike"] {
+  position: relative;
+  left: -373px;
+    top: 75px;
 }

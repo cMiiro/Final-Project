@@ -140,39 +140,36 @@ td {
 }
 a.user {
   position: relative;
-  top: -78px;
+  top: -92px;
   left: -340px;
 }
 
 button[name="like"] {
   position: relative;
-  top: 43px;
+  top: 80px;
   left: -340px;
 }
 
 button[name="signal"] {
   position: relative;
-  top: -120px;
-  left: 58px;
+  top: -137px;
+  left: 61px;
 }
 
 h1.description {
-  position: relative;
-  left: -75%;
+  position: absolute;
+  left: -197%;
+  top: 87px;
+  font-size: 15px;
 }
 
 p.like {
-  position: absolute;
-  left: -287px;
+  position: relative;
+  left: -288Px;
+  top: 100px;
 }
 
-h1.Description {
-  position: absolute;
-  top: 175px;
-  color: limegreen;
-  font-size: 20px;
-  left: 108px;
-}
+
 
 h1.name {
   position: relative;
@@ -185,4 +182,19 @@ button[name="delete"] {
   position: relative;
   top: -120px;
   left: 58px;
+}
+
+button[name="deco"] {
+  position: absolute;
+  left: 91%;
+  top: 110px;
+  background: none;
+}
+
+h1.Description {
+  position: absolute;
+  top: 137px;
+  left: 112px;
+  color: lightgreen;
+  font-size: 20px;
 }

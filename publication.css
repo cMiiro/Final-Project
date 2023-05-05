@@ -157,38 +157,48 @@ header {
 
   a.user{
     position: relative;
-    top: -146px;
+    top: -112px;
     left: 206px;
   }
   
   button[name="like"] {
     position: relative;
-    top: -10px;
+    top: 48px;
+    left: 204px;
+  }
+  button[name="unlike"] {
+    position: relative;
+    top: 48px;
     left: 204px;
   }
   
   button[name="signal"]{
     position: relative;
-    top: -182px;
+    top: -150px;
     left: 604px;
   }
   
   h1.description {
     position: relative;
-    left: 380px;
+    left: 209px;
     top: -105px;
+    font-size: 15px;
   }
   
   p.like {
     position: absolute;
-    left: 224%;
-    top: 160px;
+    left: 85%;
+    top: 181px;
   }
 
   button[name="delete"]{
     position: relative;
-    top: -182px;
+    top: -150px;
     left: 604px;
+  }
+  button[name="DeleteCom"]{
+    position: relative;
+    left: -4px;
   }
 
   
