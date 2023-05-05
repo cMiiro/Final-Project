@@ -1,156 +1,102 @@
 header {
-    text-align: center;
-    background-image: url(image/liane.png);
-    color: lawngreen;
-    background-position-y: -28px;
-    border: solid;
-    border-radius: 20px;
-    height: 100px;
-  }
-  
-  header h1 {
-    font-family: serif;
-    font-size: 50px;
-    top: -12px;
-    position: relative;
-  }
-  .home {
-    float: left;
-    position: absolute;
-    top: 15px;
-    height: 55px;
-  }
-  .profile {
-    float: right;
-    position: relative;
-    top: -11px;
-    text-align: center;
-  }
-
-
-  .titre {
-    text-align: center;
-    display: inline-block;
-  }
-  body {
-    background-image: url("image/grassass.jpg");
-    background-position: center;
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  .plus {
-    background-color: lawngreen;
-    border-color: black;
-    border-style: groove;
-    border-radius: 37px;
-    height: 39px;
-    position: absolute;
-    right: 35px;
-  }
-  input {
-    width: 176px;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    background-color: #f2f2f2;
-    position: relative;
-    left: 37%;
-  }
-  
-  button {
-    background-color: #4caf50;
-    border: none;
-    color: white;
-    padding: 2px 37px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 20px;
-    position: relative;
-    left: 36.5%;
-  }
-  
-  .profile a {
-    color: lawngreen;
-    font-family: serif;
-    display: grid;
-    top: -5px;
-    position: relative;
-    left: -19px;
-  }
-  
-  .profile img {
-    border-radius: 20px;
-    border: solid;
-  }
-  
-  img.suivre {
-    height: 34px;
-  }
-  
-  img.suivie {
-    height: 34px;
-  }
-  button:hover {
-    background-color: rgb(104, 104, 104);
-    transition: 0.7s;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-top: 50px;
-    color: chartreuse;
-  }
-  
-  table {
-    border: solid;
-    background-color: #418f5d;
-    width: 99%;
-    border-radius: 20px;
-  }
-  .buttons{
-    position: relative;
-    left: 0%;
-    height: 38px;
-  }
-  input[type="text"] {
-    position: relative;
-    left: 0%;
-  }
-  
-    .comment tr:nth-child(odd) {
-      background-color: #008732;
-    }
-    
-    .comment tr:nth-child(even) {
-      background-color: #65c689;
-    }
-    
-  .user{
-    left: -0.5%;
-    position: absolute;
-    top: -62%;
-  }
-  
-  .text{
-    position: absolute;
-    left: 58.5%;
-    top: 23%
-  }
-h1.description{
-  position: absolute;
-  top: 119px;
-  font-size: 15px;
+  text-align: center; /* Alignement horizontal */
+  background-image: url(image/liane.png); /* Image de fond */
+  color: lawngreen; /* Couleur du texte */
+  background-position-y: -28px; /*position vertical*/
+  border: solid; /* Bordure du tableau */
+  border-radius: 20px;  /* Arrondi des coins */
+  height: 100px; /* taille */
 }
-button[name="unsignal"]{
-    position: relative;
-    left: 476px;
-  }
 
-  
+header h1 {
+  font-family: serif; /* Police d'écriture */
+  font-size: 50px;/* Taille de la police */
+  top: -12px; /* Position verticale */
+  position: relative; /* Positionnement relatif */
+}
+
+.home {
+  float: left; /* Position */
+  position: absolute; /* Positionnement absolu */
+  top: 15px; /* Position verticale */
+  height: 55px; /* taille */
+}
+
+.profile {
+  float: right; /* Position */
+  position: relative; /* Positionnement relatif*/
+  top: -11px; /* Position verticale */
+  text-align: center; /* Alignement horizontal */
+}
+
+.titre {
+  text-align: center; /* Alignement horizontal */
+  display: inline-block; /* Affichage en bloc*/
+}
+
+body {
+  background-image: url("image/grassass.jpg");
+  background-position: center; /* position du fond*/
+  min-height: 100vh; /* taille minimum */
+  background-repeat: no-repeat; /*pour que le fond ne se répète pas*/
+  background-attachment: fixed; /*image du fond fixe*/
+  background-size: cover;  /* dimension du fond*/
+}
+
+button {
+  background-color: #4caf50; /* Couleur du fond */
+  border: none; /* Bordure du tableau */
+  color: white; /* Couleur du texte */
+  padding: 2px 37px; /* Espacement interne */
+  text-align: center; /* Alignement horizontal */
+  text-decoration: none; /*décoration du texte*/
+  display: inline-block; /* Type affichage */
+  font-size: 16px; /* Taille de la police */
+  margin: 4px 2px; /* comment on le centre*/
+  cursor: pointer; /*changement du curseur lorsqu'il y est sur le bouton*/
+  border-radius: 20px;  /* Arrondi des coins */
+  position: relative; /* Positionnement relatif */
+  left: 36.5%; /*position*/
+}
+
+.profile a {
+  color: lawngreen; /* Couleur du texte */
+  font-family: serif; /* Police d'écriture */
+  display: grid; /* Type affichage */
+  top: -5px; /* Position verticale */
+  position: relative; /* Positionnement relatif */
+  left: -19px; /*position*/
+}
+
+button:hover {
+  background-color: rgb(104, 104, 104); /* Couleur du fond */
+  transition: 0.7s; /*temps de transition du bouton*/
+}
+
+h1 {
+  color: chartreuse; /* Couleur du texte */
+}
+
+table {
+  border: solid; /* Bordure du tableau */
+  background-color: #418f5d; /* Couleur du fond */
+  width: 100%; /*largeur*/
+  border-radius: 20px;  /* Arrondi des coins */
+}
+
+.text {
+  position: absolute; /* Positionnement absolu */
+  left: 58.5%; /*position*/
+  top: 23%; /* Position verticale */
+}
+
+h1.description {
+  position: absolute; /* Positionnement absolu */
+  top: 119px; /* Position verticale */
+  font-size: 15px; /* Taille de la police */
+}
+
+button[name="unsignal"] {
+  position: relative; /* Positionnement relatif */
+  left: 476px; /*position*/
+}
