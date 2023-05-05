@@ -1,4 +1,4 @@
-header {
+header { 
   text-align: center;
   background-image: url(image/liane.png);
   color: lawngreen;
@@ -7,41 +7,33 @@ header {
   border-radius: 20px;
   height: 100px;
 }
+
 header h1 {
   font-family: serif;
   font-size: 50px;
   top: -12px;
   position: relative;
 }
+
 .home {
   float: left;
   position: absolute;
   top: 15px;
   height: 55px;
 }
+
 .profile {
   float: right;
   position: relative;
   top: -11px;
   text-align: center;
 }
-.profile img {
-  background-color: white;
-  border-color: black;
-  border-width: 1px;
-  border-style: groove;
-  border-radius: 15px;
-  position: relative;
-  left: 5px;
-}
-.profile p {
-  color: red;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 .titre {
   text-align: center;
   display: inline-block;
 }
+
 body {
   background-image: url(image/grassass.jpg);
   background-position: center;
@@ -50,6 +42,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
 .plus {
   background-color: lawngreen;
   border-color: black;
@@ -102,13 +95,15 @@ button:hover {
   border-radius: 20px;
   border: solid;
 }
+
 table {
   border: solid;
   border-radius: 20px;
   background-color: green;
   width: 100%;
 }
-.bouton{
+
+.bouton {
   background-color: #4caf50;
   border: none;
   color: white;
@@ -124,11 +119,12 @@ table {
   position: relative;
   left: 37%;
 }
-a{
+
+a {
   text-decoration: none;
 }
 
-a.user{
+a.user {
   position: relative;
   top: -74px;
   left: -380px;
@@ -140,10 +136,10 @@ button[name="like"] {
   left: -380px;
 }
 
-button[name="signal"]{
+button[name="signal"] {
   position: relative;
-  top:-113px;
-    left: 58px;
+  top: -113px;
+  left: 58px;
 }
 
 h1.description {
@@ -158,16 +154,16 @@ p.like {
   top: 97px;
 }
 
-button[name="delete"]{
+button[name="delete"] {
   position: relative;
-  top:-103px;
+  top: -103px;
   left: 58px;
 }
 
 button[name="unlike"] {
   position: relative;
   left: -373px;
-    top: 75px;
+  top: 75px;
 }
 
 .verif {
