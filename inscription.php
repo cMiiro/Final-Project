@@ -35,7 +35,7 @@ if(isset($_POST["go"])){ //regarde si le formulaire à déjà été remplie dans
            $user=$_POST['user'];
            $nom=$_POST['nom'];
            $prenom=$_POST['prenom'];
-           $mdp=$_POST['mdp'];
+           $mdp= password_hash($_POST['mdp'], PASSWORD_DEFAULT);
            $AddUser="INSERT INTO user VALUES('$nom' , '$prenom' ,'$user' ,'$mdp',NULL ,'image/profilvide.png',0 ,0, 0,0);";
            $resultat = mysqli_query ($connexion, $AddUser );
            if ($resultat === TRUE){
@@ -72,4 +72,6 @@ Vérification Mot de Passe :<input type="password" size="30" name="vmdp"><br></p
 </th></tr>
 </table>
 </body>
+<?php end();
+?>
 </html>

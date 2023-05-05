@@ -14,6 +14,10 @@ like();
 unlike();
 signal();
 delete();
+if(isset($_POST['DeleteCom'])){
+    $id=$_POST['DeleteCom'];
+mysqli_query($connexion,"DELETE FROM commentaire WHERE id=$id");
+}
 $modo=estmodo($_SESSION["user"]);
 //on vérifie s'il y a au moins un commentaire à afficher.
 if(isset($_GET["com"])){
@@ -24,7 +28,7 @@ if(isset($_GET["com"])){
     if($_POST["commentaire"]!==''){//regarde si le commentaire n'est pas vides
     $user=$_SESSION['user'];
     $com=$_POST["commentaire"];
-    mysqli_query($connexion, "INSERT INTO commentaire VALUES('$user','$com',$idPublication)");
+    mysqli_query($connexion, "INSERT INTO commentaire (NomUtil, TexteCom, idPublication) VALUES('$user','$com',$idPublication)");
 }}
 $publication=mysqli_query($connexion,"SELECT * FROM publications WHERE id=$idPublication");
 $publication=mysqli_fetch_assoc ($publication);
@@ -43,7 +47,16 @@ $commentaires=mysqli_query($connexion,"SELECT * FROM commentaire WHERE idPublica
         while ($ligne=mysqli_fetch_assoc($commentaires)){
             echo"<tr><td>";
             afficheNomPhotoDeProfil($ligne["NomUtil"],45);
-            echo "<br>".$ligne["TexteCom"]."<br></td></tr>";
+            echo "<br>".$ligne["TexteCom"];
+        if($ligne['NomUtil']===$_SESSION['user'] || estModo($_SESSION["user"])){
+            $idCom=$ligne["id"];
+                echo  "<form method='post'>
+                <button type='submit' name='DeleteCom' value=$idCom>
+                <img src=image/croix.png width=25 height=25>
+                </button>
+                 </form>";
+            }
+            echo "<br></td></tr>";
         }
         ?>
     </table>
@@ -53,6 +66,7 @@ $commentaires=mysqli_query($connexion,"SELECT * FROM commentaire WHERE idPublica
 }else{
     echo "il n'y a pas de publications à voir";
 }
+end();
 ?>
 </body>
 </html>

@@ -16,7 +16,7 @@ echo "L'utilsateur ".$ligne["utilSignal"]."signal la publications suivantes <a h
 affichePublications2($id);
 echo"</a>";
 }
-
+end();
 } ?>
 </body> 
 </html>

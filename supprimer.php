@@ -23,11 +23,13 @@ if(estModo($_SESSION["user"])===true){
         header("location:accueil.php");
     }
     affichePublications2($_GET["com"]);
-echo "<form method='post'>
+  //on créer un bouton pour suprimmer
+    echo "<form method='post'>
                     <button type='submit' name='delete'>
                     Voulez vraiment suprimer ce commentaire
                     </button>
                      </form>";
+ //on créer un bouton pour enlever de la liste des signalement dans le cas ou le commentaire n'as pas à se faire supprimer
 echo "<form method='post'>
                     <button type='submit' name='unsignal'>
                     Retirer de la liste des signalement
@@ -35,6 +37,7 @@ echo "<form method='post'>
                      </form>";
 }else{
     echo"Vous n'avez rien à faire là";
-} ?>
+} 
+end();?>
 </body> 
 </html>

@@ -31,7 +31,7 @@ if(isset ($_POST['nom']) && isset ($_POST['prenom']) && isset ($_POST['user']) &
 }}}else{
     echo"des informations ne sont pas rempli";
 }
-
+end();
 ?></h1>
 </body>
 </html>

@@ -72,12 +72,18 @@ require_once('header.php');
                         echo $userData["Description"];
             echo "<br></h1>";
             if($_SESSION["user"]===$_GET["user"]){
-            echo"<a href='modifications.php'>modification profil</a><br>";
+            echo"<a href='modifications.php'><img src=\"image/paramétre.png\" width=50 height=50></a>";
+            echo"<a href='like.php'><img src=\"image/like2.jpg\" width=50 height=50></a>";
+            echo"<form action=\"connection.php\" method='post'>
+                    <button type='submit' name='deco' >
+                    <img src=image/boutondeco.jpg width=50 height=50>
+                    </button>
+                     </form>";
             }else{
-            $estAbonné="SELECT * FROM $nomDeTab WHERE user='$nomDePage';";
-            $resultat = mysqli_query ($connexion, $estAbonné );//rajouter test
-            $estAbonnée= mysqli_fetch_assoc ($resultat);
-            if( $estAbonnée===NULL){
+            $estAbonne="SELECT * FROM $nomDeTab WHERE user='$nomDePage';";
+            $resultat = mysqli_query ($connexion, $estAbonne );//rajouter test
+            $estAbonne= mysqli_fetch_assoc ($resultat);
+            if( $estAbonne===NULL){
                 ?>
                 <form method="post">
             <button type="submit" name="sub">
@@ -103,7 +109,7 @@ require_once('header.php');
                 </button>
                 </form>
                 <?php
-            }}if(isset($estAbonnée) && $estAbonnée===NULL && $userData["privé"]==='1' ){
+            }}if(isset($estAbonne) && $estAbonne===NULL && $userData["prive"]==='1' ){
                 echo"ce profil est privée vous ne pouvez pas le voir";
             }else{
             $user=$_GET["user"];
@@ -118,7 +124,7 @@ require_once('header.php');
             }
         }
         }}}
-
+end();
         ?>
 </body>
 </html>

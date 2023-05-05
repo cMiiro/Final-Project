@@ -38,7 +38,7 @@ require_once("fonction.php"); //rajouter sécurité une personne non connecté n
                 $Typeautorise = array('jpg', 'jpeg', 'png', 'gif');
                 if(in_array($fileActualExt, $Typeautorise)){
                 if($fileError === 0){
-                if($fileSize < 5000000){ // limite de 5 Mo
+                if($fileSize < 5000000){ // limite de 5 Mo on ne vas pas telecharger de trop grosse images
                 $fileNameNew = uniqid('', true).".".$fileActualExt;
                 $fileDestination = 'profil/'.$fileNameNew;
                 echo $fileDestination;
@@ -54,19 +54,21 @@ require_once("fonction.php"); //rajouter sécurité une personne non connecté n
             }
             if($_POST["Newmdp"]!=="" && $_POST["OldMdp"]!==""){
                 $userData=getUserByUtil($_SESSION["user"]);
-                if($userData["mdp"]===$_POST["OldMdp"]){
-                    $newmdp=$_POST["Newmdp"];
+                //on verifie l'ancien mot de passe pour avoir un nouveau
+                if(password_verify($_POST["OldMdp"], $userData["mdp"])){
+                    $newmdp=password_hash($_POST['Newmdp'], PASSWORD_DEFAULT);
                     $req="UPDATE user SET mdp='$newmdp' WHERE NomUtil='$user' ";
                     $resultat = mysqli_query ($connexion, $req );
                 }
             }
             if(isset($_POST["private"])){
-                mysqli_query($connexion,"UPDATE user SET privé=1 WHERE NomUtil='$user'");
+                //transforme en compte privé
+                mysqli_query($connexion,"UPDATE user SET prive=1 WHERE NomUtil='$user'");
             }
             header ("Location:profil.php?user=$user");
         }
         
-        
+        end();
         
         ?>
 </body>

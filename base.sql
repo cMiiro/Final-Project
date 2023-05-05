@@ -1,7 +1,3 @@
-C:\xampp\mysql\bin\mysql -u root -p
-
-CREATE DATABASE tsg_base CHARACTER SET 'utf8';
-
 CREATE TABLE user(
     Nom VARCHAR(30),
     Prenom VARCHAR(30),
@@ -9,10 +5,10 @@ CREATE TABLE user(
     mdp VARCHAR(100),
     Description VARCHAR(160), 
     PhotoProfil VARCHAR(160),
-    abonées INT,
+    abonees INT,
     Ban BOOLEAN,
     Modo BOOLEAN,
-    privé BOOLEAN);
+    prive BOOLEAN);
 
 
     CREATE TABLE publications(
@@ -21,7 +17,7 @@ CREATE TABLE user(
     DescriptionImage varchar(500),
     dateActu DATETIME,
     aime INT,
-    privé BOOLEAN,
+    prive BOOLEAN,
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT);
 
      CREATE TABLE commentaire(
@@ -33,6 +29,3 @@ CREATE TABLE user(
      CREATE TABLE signalement(
         utilSignal varchar(30),
         idPublication INT);
-
-
-

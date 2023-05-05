@@ -40,7 +40,7 @@ function affichePublications($ligne,$modo){
     $affiche=true;
     $UserName=$ligne['NomUtil'];
     $user=$_SESSION["user"];
-    if($ligne["privé"]==='1'&& $user !== $UserName ){
+    if($ligne["prive"]==='1'&& $user !== $UserName ){
         global $connexion;
         $req="SELECT * from $user"."abonnement WHERE user='$UserName';";
         $estAbonne=mysqli_query ($connexion,$req);
@@ -151,7 +151,7 @@ function estModo($user){
 
 function getNbAbonnes($user){
     $userData=getUserByUtil($user);
-    return $userData["abonées"];
+    return $userData["abonees"];
 }
 
 function signal(){
@@ -176,5 +176,9 @@ function affichePublications2($idPublication){
     afficheNomPhotoDeProfil($publication['NomUtil'],30);
     echo "</h1><h1 class=\"description\">".$publication["DescriptionImage"];
     echo"</td></tr></table>";
+}
+//permet de fermer le site
+function end(){
+    mysqli_close();
 }
 ?>
