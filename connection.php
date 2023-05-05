@@ -33,8 +33,6 @@ if(isset($_POST["user"])){ //regarde si le user est déjà rempli.
   if ($user===null){
       echo"Ce nom d'utilisateur n'existe pas";
   }else{ 
-   echo $_POST['mdp'];
-   echo  $user['mdp'];
       if(password_verify($_POST['mdp'], $user['mdp'])){
       setcookie("user",$_POST["user"],time()+3600); //on enregistre le nom d'utilisateur pendant 3600 secondes(Une heure) pour ne pas avoir à le réécrire.
       $_SESSION["user"]=$_POST["user"];
@@ -61,6 +59,6 @@ if(isset($_POST["user"])){ //regarde si le user est déjà rempli.
 </th></tr>
 </table>
 </body>
-<?php end();
+<?php mysqli_close($connexion);
  ?>
 </html>

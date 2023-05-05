@@ -22,6 +22,7 @@ affichePublications2($_GET["com"]);
                     </button>
                      </form>";
     echo "Un abus de signialement injustifier peut être un raison de ban";
-    end();                 ?>
+    mysqli_close($connexion);                
+    ?>
 </body> 
 </html>

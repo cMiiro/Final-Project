@@ -38,6 +38,6 @@ echo "<form method='post'>
 }else{
     echo"Vous n'avez rien à faire là";
 } 
-end();?>
+mysqli_close($connexion);?>
 </body> 
 </html>

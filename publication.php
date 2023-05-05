@@ -66,7 +66,7 @@ $commentaires=mysqli_query($connexion,"SELECT * FROM commentaire WHERE idPublica
 }else{
     echo "il n'y a pas de publications à voir";
 }
-end();
+mysqli_close($connexion);
 ?>
 </body>
 </html>

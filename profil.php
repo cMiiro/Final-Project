@@ -35,7 +35,7 @@ require_once('header.php');
                 if(isset($_POST["sub"])){
                     mysqli_query ($connexion, "INSERT INTO $nomDeTab VALUES('$nomDePage');");
                     $newNbAbonée=getNbAbonnes($nomDePage)+1;
-                    mysqli_query($connexion,"UPDATE user SET abonées=$newNbAbonée WHERE NomUtil='$nomDePage'");
+                    mysqli_query($connexion,"UPDATE user SET abonees=$newNbAbonée WHERE NomUtil='$nomDePage'");
                     unset($_POST["sub"]);
                     header ("Location:profil.php?user=$nomDePage");
                 }
@@ -47,7 +47,7 @@ require_once('header.php');
                 if(isset($_POST["unsub"])){
                     mysqli_query ($connexion, "DELETE FROM $nomDeTab WHERE user='$nomDePage';");
                     $newNbAbonée=getNbAbonnes($nomDePage)-1;
-                    mysqli_query($connexion,"UPDATE user SET abonées=$newNbAbonée WHERE NomUtil='$nomDePage'");
+                    mysqli_query($connexion,"UPDATE user SET abonees=$newNbAbonée WHERE NomUtil='$nomDePage'");
                     unset($_POST["unsub"]);
                     header ("Location:profil.php?user=$nomDePage");
                     }
@@ -109,8 +109,9 @@ require_once('header.php');
                 </button>
                 </form>
                 <?php
-            }}if(isset($estAbonne) && $estAbonne===NULL && $userData["prive"]==='1' ){
-                echo"ce profil est privée vous ne pouvez pas le voir";
+                
+            }}if( $estAbonne===NULL && $userData["prive"]==='1' ){
+                echo"<h1 class=\"name\">Ce profil est privée vous ne pouvez pas le voir</h1>";
             }else{
             $user=$_GET["user"];
             $req="SELECT * FROM publications WHERE NomUtil='$user' ORDER BY id DESC";
@@ -124,7 +125,7 @@ require_once('header.php');
             }
         }
         }}}
-end();
+        mysqli_close($connexion);
         ?>
 </body>
 </html>

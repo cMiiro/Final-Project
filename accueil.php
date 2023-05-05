@@ -61,7 +61,7 @@ require_once('header.php');
             affichePublications2($id);
             }}
         }
-        end();
+        mysqli_close($connexion);
     ?>
     
 <body>

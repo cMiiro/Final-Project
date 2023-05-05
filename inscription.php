@@ -72,6 +72,6 @@ Vérification Mot de Passe :<input type="password" size="30" name="vmdp"><br></p
 </th></tr>
 </table>
 </body>
-<?php end();
+<?php mysqli_close($connexion);
 ?>
 </html>

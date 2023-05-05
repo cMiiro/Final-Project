@@ -26,7 +26,7 @@ if($id!==NULL) {
     }
     }}
 }
-end();
+mysqli_close($connexion);
 ?>
 </body>
 </html>

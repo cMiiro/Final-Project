@@ -74,7 +74,7 @@ $resultat = mysqli_query ($connexion, $AddPublication );
 
 
 
-   end();
+mysqli_close($connexion);
     ?></p>
     </th></tr>
     </table>

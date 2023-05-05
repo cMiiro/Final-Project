@@ -16,7 +16,7 @@ require_once("fonction.php"); //rajouter sécurité une personne non connecté n
          Nouvelle Description <br> <textarea name="NewDescription" rows="10" cols="70" ></textarea><br>
          Ancien Mot De Passe : <input type="text" name="OldMdp"><br>
          Nouveau Mot De Passe :<input type="text" name="Newmdp"><br>
-         <button type="submit" name="private">devenir compte privé</button><br>
+       devenir compte privé <input type="checkbox" name="private">  <br>
          <input type="submit" name="go"></form>
         
         
@@ -68,8 +68,7 @@ require_once("fonction.php"); //rajouter sécurité une personne non connecté n
             header ("Location:profil.php?user=$user");
         }
         
-        end();
-        
+        mysqli_close($connexion);
         ?>
 </body>
 </html>

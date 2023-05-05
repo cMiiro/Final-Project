@@ -178,7 +178,5 @@ function affichePublications2($idPublication){
     echo"</td></tr></table>";
 }
 //permet de fermer le site
-function end(){
-    mysqli_close();
-}
+
 ?>
