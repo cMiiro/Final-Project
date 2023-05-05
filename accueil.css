@@ -1,176 +1,171 @@
-header {
-  text-align: center;
-  background-image: url(image/liane.png);
-  color: lawngreen;
-  background-position-y: -28px;
-  border: solid;
-  border-radius: 20px;
-  height: 100px;
+header { 
+  text-align: center; /* Alignement horizontal */
+  background-image: url(image/liane.png); /* Image de fond */
+  color: lawngreen; /* Couleur du texte */
+  background-position-y: -28px; /*position horizontal*/
+  border: solid; /* Bordure du tableau */
+  border-radius: 20px; /* Arrondi des coins */
+  height: 100px; /* taille */
 }
+
 header h1 {
-  font-family: serif;
-  font-size: 50px;
-  top: -12px;
-  position: relative;
+  font-family: serif; /* Police d'écriture */
+  font-size: 50px; /* Taille de la police */
+  top: -12px; /* Position verticale */
+  position: relative; /* Positionnement relatif*/
 }
+
 .home {
-  float: left;
-  position: absolute;
-  top: 15px;
-  height: 55px;
+  float: left; /* Position */
+  position: absolute; /* Positionnement absolu*/
+  top: 15px; /* Position verticale */
+  height: 55px; /* taille */
 }
+
 .profile {
-  float: right;
-  position: relative;
-  top: -11px;
-  text-align: center;
+  float: right; /* Position */
+  position: relative; /* Positionnement relatif*/
+  top: -11px; /* Position verticale */
+  text-align: center; /* Alignement horizontal */
 }
-.profile img {
-  background-color: white;
-  border-color: black;
-  border-width: 1px;
-  border-style: groove;
-  border-radius: 15px;
-  position: relative;
-  left: 5px;
-}
-.profile p {
-  color: red;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 .titre {
-  text-align: center;
-  display: inline-block;
+  text-align: center; /* Alignement horizontal */
+  display: inline-block; /* Affichage en bloc*/
 }
+
 body {
-  background-image: url(image/grassass.jpg);
-  background-position: center;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-image: url(image/grassass.jpg); /* Image de fond */
+  background-position: center; /* position du fond*/
+  min-height: 100vh; /* taille minimum */
+  background-repeat: no-repeat; /*pour que le fond ne se répète pas*/
+  background-attachment: fixed; /*image du fond fixe*/
+  background-size: cover; /* dimension du fond*/
 }
+
 .plus {
-  background-color: lawngreen;
-  border-color: black;
+  background-color: lawngreen; /* Couleur du fond du texte */
+  border-color: black; /* Couleur du texte */
   border-style: groove;
-  border-radius: 37px;
-  height: 39px;
-  position: absolute;
-  right: 35px;
+  border-radius: 37px; /* Arrondi des coins */
+  height: 39px; /* taille */
+  position: absolute; /* Positionnement absolu*/
+  right: 35px; /*position*/
 }
 input {
-  width: 176px;
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  background-color: #f2f2f2;
-  position: relative;
-  left: 37%;
+  width: 176px; /*largeur*/
+  padding: 10px; /* Espacement interne */
+  border: none; /* Bordure du tableau */
+  border-radius: 20px; /* Arrondi des coins */
+  background-color: #f2f2f2; /* Couleur du fond du texte */
+  position: relative; /* Positionnement relatif*/
+  left: 37%; /* Position horizontale */
 }
 
 button {
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 20px;
-  position: relative;
+  background-color: #4caf50; /* Couleur du fond du texte */
+  border: none; /* Bordure du tableau */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement interne */
+  text-align: center; /* Alignement horizontal */
+  text-decoration: none; /*décoration du texte*/  
+  display: inline-block; /* comment on le voit, la forme*/
+  font-size: 16px; /* Taille de la police */
+  margin: 4px 2px; /* comment on le centre*/
+  cursor: pointer; /*changement du cursor lorsqu'il y est sur le bouton*/
+  border-radius: 20px; /* Arrondi des coins */
+  position: relative; /* Positionnement relatif*/
 }
 button:hover {
-  background-color: rgb(104, 104, 104);
-  transition: 0.7s;
+  background-color: rgb(104, 104, 104); /* Couleur du fond du texte */
+  transition: 0.7s; /*temps de transition du bouton*/
 }
 
 .profile a {
-  color: lawngreen;
-  font-family: serif;
-  display: grid;
-  top: -5px;
-  position: relative;
-  left: -19px;
+  color: lawngreen; /* Couleur du texte */
+  font-family: serif; /* Police d'écriture */
+  display: grid; /*comment on le place, forme en bloc ou etc...*/
+  top: -5px; /* Position verticale */
+  position: relative; /* Positionnement relatif*/
+  left: -19px; /* Position horizontale */
 }
 
 .profile img {
-  border-radius: 20px;
-  border: solid;
-}
-table {
-  border: solid;
-  border-radius: 20px;
-  background-color: green;
-  width: 100%;
-}
-.bouton{
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 20px;
-  position: relative;
-  left: 37%;
-}
-a{
-  text-decoration: none;
+  border-radius: 20px; /* Arrondi des coins */
+  border: solid; /* Bordure du tableau */
 }
 
-a.user{
-  position: relative;
-  top: -74px;
-  left: -380px;
+table {
+  border: solid; /* Bordure du tableau */
+  border-radius: 20px; /* Arrondi des coins */
+  background-color: green; /* Couleur du fond texte */
+  width: 100%; /*largeur*/
+}
+
+.bouton {
+  background-color: #4caf50;/* Couleur du fond du texte */
+  border: none; /* Bordure du tableau */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement interne */
+  text-align: center; /* Alignement horizontal */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Taille de la police */
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer; 
+  border-radius: 20px; /* Arrondi des coins */
+  position: relative; /* Positionnement relatif*/
+  left: 37%; /* Position horizontale */
+}
+
+a {
+  text-decoration: none; /*décoration du text*/
+}
+
+a.user {
+  position: relative; /* Positionnement relatif*/
+  top: -74px; /* Position verticale */
+  left: -380px; /* Position horizontale */
 }
 
 button[name="like"] {
-  position: relative;
-  top: 79px;
-  left: -380px;
+  position: relative; /* Positionnement relatif*/
+  top: 79px; /* Position verticale */
+  left: -380px; /* Position horizontale */
 }
 
-button[name="signal"]{
-  position: relative;
-  top:-113px;
-    left: 58px;
+button[name="signal"] {
+  position: relative; /* Positionnement relatif*/
+  top: -113px; /* Position verticale */
+  left: 58px; /* Position horizontale */
 }
 
 h1.description {
-  position: absolute;
-  left: 723px;
-  font-size: 15px;
+  position: absolute; /* Positionnement absolu*/
+  left: 723px; /* Position horizontale */
+  font-size: 15px; /* Taille de la police */
 }
 
 p.like {
-  position: relative;
-  left: -343px;
-  top: 97px;
+  position: relative; /* Positionnement relatif*/
+  left: -343px; /* Position horizontale */
+  top: 97px; /* Position verticale */
 }
 
-button[name="delete"]{
-  position: relative;
-  top:-103px;
-  left: 58px;
+button[name="delete"] {
+  position: relative; /* Positionnement relatif*/
+  top: -103px; /* Position verticale */
+  left: 58px; /* Position horizontale */
 }
 
 button[name="unlike"] {
-  position: relative;
-  left: -373px;
-    top: 75px;
+  position: relative; /* Positionnement relatif*/
+  left: -373px; /* Position horizontale */
+  top: 75px; /* Position verticale */
 }
 
 .verif {
-  position: absolute;
-  height: 57px;
+  position: absolute; /* Positionnement absolu*/
+  height: 57px; /* taille */
 }
