@@ -169,3 +169,8 @@ button[name="unlike"] {
   left: -373px;
     top: 75px;
 }
+
+.verif {
+  position: absolute;
+  height: 57px;
+}

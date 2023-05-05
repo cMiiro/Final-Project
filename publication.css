@@ -187,9 +187,10 @@ header {
   
   p.like {
     position: absolute;
-    left: 85%;
+    left: 258px;
     top: 181px;
-  }
+}
+
 
   button[name="delete"]{
     position: relative;

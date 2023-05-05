@@ -8,6 +8,7 @@ require_once('header.php');
 <meta charset="ufr-8">
     </head>
 <body>
+<a href="verificationSignalment.php"><img class="verif" src="image/verif.png"></a>
 <?php 
      if(isset($_SESSION["user"])){
      //on vérifie s'il y a des like ajouter ou suprimmer.
