@@ -76,7 +76,7 @@ require_once('header.php');
             echo"<a href='like.php'><img src=\"image/like2.jpg\" width=50 height=50></a>";
             echo"<form action=\"connection.php\" method='post'>
                     <button type='submit' name='deco' >
-                    <img src=image/boutondeco.jpg width=50 height=50>
+                    <img src=image/boutondeco.png width=50 height=50>
                     </button>
                      </form>";
                      $estAbonne="yes";// je veux juste qu'il ne soit pas null pour après
