@@ -198,3 +198,9 @@ h1.Description {
   color: lightgreen;
   font-size: 20px;
 }
+
+button[name="unlike"] {
+  position: relative;
+  top: 80px;
+  left: -340px;
+}
