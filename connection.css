@@ -1,79 +1,88 @@
+/* Définit l'image de fond du corps de la page */
 body {
   background-image: url("image/poke.jpg");
 }
+
+/* Style pour le titre principal de la page */
 h1 {
-  color: #3e3c3c;
-  font-size: 50px;
-  line-height: 216px;
-  text-align: center;
-  font-family: cursive;
+  color: #3e3c3c; /* Couleur du texte */
+  font-size: 50px; /* Taille de la police */
+  line-height: 216px; /* Hauteur de ligne */
+  text-align: center; /* Alignement horizontal */
+  font-family: cursive; /* Police d'écriture */
 }
+
+/* Style pour le sous-titre de la page */
 h2 {
-  color: #2c2424;
-  font-size: 15px;
-  line-height: 495px;
-  text-align: center;
-  font-family: verdana;
+  color: #2c2424; /* Couleur du texte */
+  font-size: 15px; /* Taille de la police */
+  line-height: 495px; /* Hauteur de ligne */
+  text-align: center; /* Alignement horizontal */
+  font-family: verdana; /* Police d'écriture */
 }
 
+/* Style pour le tableau contenant le formulaire */
 table {
-  border: 2px solid green;
-  border-radius: 18px;
-  box-shadow: 0 0 200px 4px #4caf50;
-  width: 60%;
-  font-family: cursive;
-  position: absolute;
-  top: 29%;
-  left: 19%;
+  border: 2px solid green; /* Bordure du tableau */
+  border-radius: 18px; /* Arrondi des coins */
+  box-shadow: 0 0 200px 4px #4CAF50; /* Ombre */
+  width: 60%; /* Largeur du tableau */
+  font-family: cursive; /* Police d'écriture */
+  position: absolute; /* Positionnement absolu */
+  top: 29%; /* Position verticale */
+  left: 19%; /* Position horizontale */
 }
 
+/* Style pour le haut tableau */
 th {
-  background-image: url("image/poke3.jpg");
-  border-radius: 10px;
-  background-position: top;
-  color: #3e3c3c;
-  font-size: 18px;
-  padding: 10px;
-  margin: auto;
+  background-image: url("image/poke3.jpg"); /* Image de fond */
+  border-radius: 10px; /* Arrondi des coins */
+  background-position: top; /* Positionnement de l'image de fond */
+  color: #3e3c3c; /* Couleur du texte */
+  font-size: 18px; /* Taille de la police */
+  padding: 10px; /* Espacement interne */
+  margin: auto; /* Centre le contenu horizontalement */
 }
 
-.formulaire {
-  margin: 10px;
-  text-align: left;
-}
 
+/* Style pour les champs de texte */
 input[type="text"] {
-  border: 1px solid #000000;
-  border-radius: 4px;
-  box-sizing: border-box;
-  padding: 10px;
-  width: 100%;
+  border: 1px solid #000000; /* Bordure */
+  border-radius: 4px; /* Arrondi des coins */
+  box-sizing: border-box; /* Taille de la boîte incluant la bordure */
+  padding: 10px; /* Espacement interne */
+  width: 100%; /* Largeur */
 }
 
+/* Style pour les champs de mot de passe */
 input[type="password"] {
-  border: 1px solid #000000;
-  border-radius: 4px;
-  box-sizing: border-box;
-  padding: 10px;
-  width: 100%;
+  border: 1px solid #000000; /* Bordure */
+  border-radius: 4px; /* Arrondi des coins */
+  box-sizing: border-box; /* Taille de la boîte incluant la bordure */
+  padding: 10px; /* Espacement interne */
+  width: 100%; /* Largeur */
 }
 
+/*Style du bouton envoie*/
 input[type="submit"] {
-  background-color: #4caf50;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 10px;
-  width: 100%;
+  background-color: #4CAF50; /* Couleur de fond */
+  border: none; /* Supprime la bordure du bouton */
+  color: #fff; /* Couleur du texte du bouton */
+  cursor: pointer; /* Curseur de la souris qui change lorsqu'on survole le bouton */
+  font-size: 16px; /* Taille de la police de caractères */
+  padding: 10px; /* Ajoute un espace intérieur, sa le fait grossir */
+  width: 100%; /* Largeur du bouton */
 }
 
+/*Style lorsqu'il y a une erreur*/
 .erreur {
-  color: red;
-  font-weight: bold;
-  margin: 10px;
+  color: red; /* Couleur du texte  */
+  font-weight: bold; /* Épaisseur de la police de caractères  */
+  margin: 10px; /* Ajoute une marge de 10 pixels autour */
 }
+
+/*Style pour le bouton home*/
 img.home {
-  position: absolute;
-  height: 50px;
+  position: absolute; /* Positionne l'image de la maison de manière absolue */
+  height: 50px; /* Hauteur de l'image de la maison en pixels */
 }
