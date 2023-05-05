@@ -1,8 +1,7 @@
 <?php 
 require_once('header.php');
 ?>
-<!DOCTYPE html>
-<html>
+
 <head>
     <link rel="stylesheet" href="supprimer.css">
 <meta charset="ufr-8">
@@ -21,7 +20,7 @@ affichePublications2($_GET["com"]);
                     Voulez vraiment signialer ce commentaire.
                     </button>
                      </form>";
-    echo "Un abus de signialement injustifier peut être un raison de ban";
+    echo "<h1>Un abus de signialement injustifier peut être un raison de ban</h1>";
     mysqli_close($connexion);                
     ?>
 </body> 

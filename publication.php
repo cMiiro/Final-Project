@@ -1,8 +1,7 @@
 <?php 
 require_once('header.php');
 ?>
-<!DOCTYPE html>
-<html>
+
 <head>
     <link rel="stylesheet" href="publication.css">
 <meta charset="ufr-8">

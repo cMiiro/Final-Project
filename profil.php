@@ -1,8 +1,6 @@
 <?php
 require_once('header.php');
 ?>
-<!DOCTYPE html>
-<html>
     <head>
      <link rel="stylesheet" href="profile.css">
      <meta charset="ufr-8"/>
@@ -58,7 +56,7 @@ require_once('header.php');
             afficheNomPhotoDeProfil($_GET["user"],100);
             echo"</h1>";
             if($userData["Ban"]==="1"){
-                echo"<h1 class=\"Description\">Cette utilisateur a été bani(e).<br> Son contenu ne peux plus être visible.</h1><br>";
+                echo"<h1 class=\"name\">Cette utilisateur a été bani(e).<br> Son contenu ne peux plus être visible.</h1><br>";
                 if(estModo($_SESSION["user"])===true){
                     ?>
                     <form method="post">

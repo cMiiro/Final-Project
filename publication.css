@@ -1,175 +1,205 @@
 header {
-  text-align: center;
-  background-image: url(image/liane.png);
-  color: lawngreen;
-  background-position-y: -28px;
-  border: solid;
-  border-radius: 20px;
-  height: 100px;
+    text-align: center;
+    background-image: url(image/liane.png);
+    color: lawngreen;
+    background-position-y: -28px;
+    border: solid;
+    border-radius: 20px;
+    height: 100px;
+  }
+  
+  header h1 {
+    font-family: serif;
+    font-size: 50px;
+    top: -12px;
+    position: relative;
+  }
+  .home {
+    float: left;
+    position: absolute;
+    top: 15px;
+    height: 55px;
+  }
+  .profile {
+    float: right;
+    position: relative;
+    top: -11px;
+    text-align: center;
+  }
+  .profile img {
+    background-color: rgb(198, 39, 39);
+    border-color: rgb(145, 52, 52);
+    border-width: 1px;
+    border-style: groove;
+    border-radius: 15px;
+    position: relative;
+    left: 5px;
+  }
+  .profile p {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .titre {
+    text-align: center;
+    display: inline-block;
+  }
+  body {
+    background-image: url("image/grassass.jpg");
+    background-position: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .plus {
+    background-color: lawngreen;
+    border-color: black;
+    border-style: groove;
+    border-radius: 37px;
+    height: 39px;
+    position: absolute;
+    right: 35px;
+  }
+  input {
+    width: 176px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    position: relative;
+    left: 37%;
+  }
+  
+  button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 2px 37px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+    left: -1.5%;
+  }
+  
+  .profile a {
+    color: lawngreen;
+    font-family: serif;
+    display: grid;
+    top: -5px;
+    position: relative;
+    left: -19px;
+  }
+  
+  .profile img {
+    border-radius: 20px;
+    border: solid;
+  }
+  
+  img.suivre {
+    height: 34px;
+  }
+  
+  img.suivie {
+    height: 34px;
+  }
+  button:hover {
+    background-color: rgb(104, 104, 104);
+    transition: 0.7s;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: chartreuse;
+  }
+  
+  table {
+    border: solid;
+    background-color: #418f5d;
+    width: 99%;
+    border-radius: 20px;
+  }
+  .buttons{
+    position: relative;
+    left: 0%;
+    height: 38px;
+  }
+  input[type="text"] {
+    position: relative;
+    left: 0%;
+  }
+  
+    .comment tr:nth-child(odd) {
+      background-color: #008732;
+    }
+    
+    .comment tr:nth-child(even) {
+      background-color: #65c689;
+    }
+    
+  .user{
+    left: -0.5%;
+    position: absolute;
+    top: -62%;
+  }
+  
+  .text{
+    position: absolute;
+    left: 41.5%;
+    top:42%
+  }
+
+  a.user{
+    position: relative;
+    top: -112px;
+    left: 206px;
+  }
+  
+  button[name="like"] {
+    position: relative;
+    top: 48px;
+    left: 204px;
+  }
+  button[name="unlike"] {
+    position: relative;
+    top: 48px;
+    left: 204px;
+  }
+  
+  button[name="signal"]{
+    position: relative;
+    top: -150px;
+    left: 604px;
+  }
+  
+  h1.description {
+    position: relative;
+    left: 209px;
+    top: -105px;
+    font-size: 15px;
+  }
+  
+  p.like {
+    position: absolute;
+    left: 258px;
+    top: 181px;
 }
 
-header h1 {
-  font-family: serif;
-  font-size: 50px;
-  top: -12px;
-  position: relative;
-}
 
-.home {
-  float: left;
-  position: absolute;
-  top: 15px;
-  height: 55px;
-}
+  button[name="delete"]{
+    position: relative;
+    top: -150px;
+    left: 604px;
+  }
+  button[name="DeleteCom"]{
+    position: relative;
+    left: -4px;
+  }
 
-.profile {
-  float: right;
-  position: relative;
-  top: -11px;
-  text-align: center;
-}
-
-.titre {
-  text-align: center;
-  display: inline-block;
-}
-
-body {
-  background-image: url("image/grassass.jpg");
-  background-position: center;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-input {
-  width: 176px;
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  background-color: #f2f2f2;
-  position: relative;
-  left: 37%;
-}
-
-button {
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 2px 37px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 20px;
-  position: relative;
-  left: -1.5%;
-}
-
-.profile a {
-  color: lawngreen;
-  font-family: serif;
-  display: grid;
-  top: -5px;
-  position: relative;
-  left: -19px;
-}
-
-a{
-  text-decoration: none;
-}
-
-button:hover {
-  background-color: rgb(104, 104, 104);
-  transition: 0.7s;
-}
-
-table {
-  border: solid;
-  background-color: #418f5d;
-  width: 100%;
-  border-radius: 20px;
-}
-
-.buttons {
-  position: relative;
-  left: 0%;
-  height: 38px;
-}
-
-input[type="text"] {
-  position: relative;
-  left: 0%;
-}
-
-.comment tr:nth-child(odd) {
-  background-color: #008732;
-}
-
-.comment tr:nth-child(even) {
-  background-color: #65c689;
-}
-
-.user {
-  left: -0.5%;
-  position: absolute;
-  top: -62%;
-}
-
-.text {
-  position: absolute;
-  left: 41.5%;
-  top: 42%;
-}
-
-a.user {
-  position: relative;
-  top: -112px;
-  left: 206px;
-}
-
-button[name="like"] {
-  position: relative;
-  top: 57px;
-  left: 204px;
-}
-
-button[name="unlike"] {
-  position: relative;
-  top: 48px;
-  left: 204px;
-}
-
-button[name="signal"] {
-  position: relative;
-  top: -150px;
-  left: 604px;
-}
-
-h1.description {
-  position: relative;
-  left: 209px;
-  top: -105px;
-  font-size: 15px;
-}
-
-p.like {
-  position: absolute;
-  left: 258px;
-  top: 151px;
-}
-
-button[name="delete"] {
-  position: relative;
-  top: -150px;
-  left: 604px;
-}
-
-button[name="DeleteCom"] {
-  position: relative;
-  left: -4px;
-}
+  

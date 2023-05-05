@@ -1,22 +1,30 @@
 <?php 
 require_once('header.php');
 ?>
-<!DOCTYPE html>
-<html>
+
 <head>
     <link rel="stylesheet" href="accueil.css">
 <meta charset="ufr-8">
     </head>
 <body>
-<a href="verificationSignalment.php"><img class="verif" src="image/verif.png"></a>
-<?php 
-     if(isset($_SESSION["user"])){
+    <?php
+    if(isset($_SESSION["user"])){
+    $modo=estmodo($_SESSION["user"]);
+    if ($modo){
+        $signal=mysqli_query($connexion,"SELECT * FROM signalement");
+        $signal=mysqli_fetch_assoc($signal);
+        
+        //le bouton plus bas n'apparait que s'il y a des commentaires signialé et n'est visible que les modérateur
+        if($signal!==NULL){
+    
+echo "<a href=\"verificationSignalment.php\"><img class=\"verif\" src=\"image/verif.png\"></a>";
+ }}
+     
      //on vérifie s'il y a des like ajouter ou suprimmer.
      like();
      unlike();
      signal();
      delete();
-     $modo=estmodo($_SESSION["user"]);
 ?>
 
     <a href="createPublication.php"> <img class="plus" src="image/plus.png"></a><br>

@@ -14,4 +14,5 @@ require_once('fonction.php');
 <?php estConnecte()?></h2>
 </div>
 </header> 
-</html>
+<!-- Pas de </html> car il se trouve à la fin de chaque autre fichier(accueil.php,profil.php, etc...). Ces même fichier n'on pas <!DOCTYPE html> car ils sont dans ce fichier<html> -->
+
