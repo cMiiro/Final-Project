@@ -1,206 +1,191 @@
 header {
-  text-align: center;
-  background-image: url(image/liane.png);
-  color: lawngreen;
-  background-position-y: -28px;
-  border: solid;
-  border-radius: 20px;
-  height: 100px;
+  text-align: center; /* Alignement horizontal */
+  background-image: url(image/liane.png); /* Image de fond */
+  color: lawngreen; /* Couleur du texte */
+  background-position-y: -28px; /* positionnement verticale*/
+  border: solid; /* Bordure du tableau */
+  border-radius: 20px; /* arrondis des coins*/
+  height: 100px; /* taille */
 }
 
 header h1 {
-  font-family: serif;
-  font-size: 50px;
-  top: -12px;
-  position: relative;
+  font-family: serif; /* Police d'écriture */
+  font-size: 50px; /* Taille de la police */
+  top: -12px; /* positionnement verticale*/
+  position: relative; /*positionnement relatif*/
 }
+
 .home {
-  float: left;
-  position: absolute;
-  top: 15px;
-  height: 55px;
+  float: left; /* position*/
+  position: absolute; /*positionnement absolue*/
+  top: 15px;/* positionnement verticale*/
+  height: 55px; /* taille */
 }
+
 .profile {
-  float: right;
-  position: relative;
-  top: -11px;
-  text-align: center;
+  float: right; /*position*/
+  position: relative; /*positionnement relatif*/
+  top: -11px; /* positionnement verticale*/
+  text-align: center; /* Alignement horizontal */
 }
-.profile img {
-  background-color: rgb(198, 39, 39);
-  border-color: rgb(145, 52, 52);
-  border-width: 1px;
-  border-style: groove;
-  border-radius: 15px;
-  position: relative;
-  left: 5px;
-}
-.profile p {
-  color: red;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 .titre {
-  text-align: center;
-  display: inline-block;
+  text-align: center; /* Alignement horizontal */
+  display: inline-block; /* type d'affichage*/
 }
+
 body {
-  background-image: url("image/grassass.jpg");
-  background-position: center;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-image: url("image/grassass.jpg"); /*image du fond*/
+  background-position: center; /*position du fond de l'image*/
+  min-height: 100vh; /* taille minimum */
+  background-repeat: no-repeat;  /*pour que le fond ne se répète pas*/
+  background-attachment: fixed;  /*image du fond fixe*/
+  background-size: cover; /* dimension du fond*/
 }
+
 .plus {
-  background-color: lawngreen;
-  border-color: black;
-  border-style: groove;
-  border-radius: 37px;
-  height: 39px;
-  position: absolute;
-  right: 35px;
-}
-input {
-  width: 176px;
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  background-color: #f2f2f2;
-  position: relative;
-  left: 37%;
+  background-color: lawngreen;/* Couleur du fond*/
+  border-color: black; /* Couleur de la bordure*/
+  border-style: groove; /*style de la bordure*/
+  border-radius: 37px; /* arrondis des coins*/
+  height: 39px; /* taille */
+  position: absolute; /*positionnement absolue*/
+  right: 35px; /*positionnement horizontale*/
 }
 
 button {
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 2px 37px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 20px;
-  position: relative;
-  left: -1%;
-  top: 62%;
+  background-color: #4caf50; /* Couleur du fond */
+  border: none; /* Bordure du tableau */
+  color: white; /* Couleur du texte */
+  padding: 2px 37px; /* Espacement interne */
+  text-align: center; /* Alignement horizontal */
+  text-decoration: none; /*décoration du texte*/
+  display: inline-block; /* type d'affichage*/
+  font-size: 16px; /* Taille de la police */
+  margin: 4px 2px; /* comment on le centre*/
+  cursor: pointer;/*changement du cursor lorsqu'il y est sur le bouton*/
+  border-radius: 20px; /* arrondis des coins*/
+  position: relative; /*positionnement relatif*/
+  left: -1%;/*positionnement horizontale*/
+  top: 62%; /* positionnement verticale*/
 }
 
 .profile a {
-  color: lawngreen;
-  font-family: serif;
-  display: grid;
-  top: -5px;
-  position: relative;
-  left: -19px;
+  color: lawngreen; /* Couleur du texte */
+  font-family: serif; /* Police d'écriture */
+  display: grid; /* type d'affichage*/
+  top: -5px; /* positionnement verticale*/
+  position: relative;/*positionnement relatif*/ 
+  left: -19px; /* positionnemnet horizontale*/
 }
 
 .profile img {
-  border-radius: 20px;
-  border: solid;
+  border-radius: 20px; /* arrondis des coins*/
+  border: solid; /* Bordure du tableau */
 }
 
 img.suivre {
-  height: 34px;
+  height: 34px; /* taille */
 }
 
 img.suivie {
-  height: 34px;
+  height: 34px; /* taille */
 }
+
 button:hover {
-  background-color: rgb(104, 104, 104);
-  transition: 0.7s;
+  background-color: rgb(104, 104, 104); /* Couleur du fond */
+  transition: 0.7s; /* temps de transition*/
 }
 
 table {
-  border: solid;
-  background-color: #418f5d;
-  width: 100%;
-  border-radius: 20px;
+  border: solid; /* Bordure du tableau */
+  background-color: #418f5d; /* Couleur du fond */
+  width: 100%;  /*largeur*/
+  border-radius: 20px; /* arrondis des coins*/
 }
+
 .buttons {
-  position: relative;
-  left: 0%;
-  height: 38px;
+  position: relative; /* positionnement relatif*/
+  left: 0%; /* positionnement horizontale*/
+  height: 38px; /* taille */
 }
+
 input[type="text"] {
-  position: relative;
-  left: 0%;
+  position: relative; /* positionnement relatif*/
+  left: 0%;/* positionnement horizontale*/
 }
 
 a {
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
+  text-decoration: none; /* décoration du texte*/
+  font-size: 20px; /* Taille de la police */
+  font-weight: bold; /* épaisseur de la police*/
 }
+
 td {
-  position: relative;
+  position: relative; /* positionnement relatif*/
 }
+
 a.user {
-  position: relative;
-  top: -92px;
-  left: -340px;
+  position: relative; /* positionnement relatif*/
+  top: -92px; /* positionnement verticale*/
+  left: -340px; /* positionnement horizontale*/
 }
 
 button[name="like"] {
-  position: relative;
-  top: 80px;
-  left: -340px;
+  position: relative; /* positionnement relatif*/
+  top: 80px; /* positionnement verticale*/
+  left: -340px; /* positionnement horizontale*/
 }
 
 button[name="signal"] {
-  position: relative;
-  top: -137px;
-  left: 61px;
+  position: relative; /* positionnement relatif*/
+  top: -137px; /* positionnement verticale*/
+  left: 61px; /* positionnement horizontale*/
 }
 
 h1.description {
-  position: absolute;
-  left: -197%;
-  top: 87px;
-  font-size: 15px;
+  position: absolute; /* positionnement absolue*/
+  left: -197%; /* positionnement horizontale*/
+  top: 87px; /* positionnement verticale*/
+  font-size: 15px; /* Taille de la police */
 }
 
 p.like {
-  position: relative;
-  left: -288Px;
-  top: 100px;
+  position: relative; /* positionnement relatif*/
+  left: -288px; /* positionnement horizontale*/
+  top: 100px; /* positionnement verticale*/
 }
 
-
-
 h1.name {
-  position: relative;
-  top: -4px;
-  display: flex;
-  color: limegreen;
+  position: relative; /* positionnement relatif*/
+  top: -4px; /* positionnement verticale*/
+  display: flex; /* type d'affichage*/
+  color: limegreen; /* Couleur du texte */
 }
 
 button[name="delete"] {
-  position: relative;
-  top: -120px;
-  left: 58px;
+  position: relative; /* positionnement relatif*/
+  top: -120px; /* positionnement verticale*/
+  left: 58px; /* positionnement horizontale*/
 }
 
 button[name="deco"] {
-  position: absolute;
-  left: 91%;
-  top: 110px;
+  position: absolute; /* positionnement absolue*/
+  left: 91%; /* positionnement horizontale*/
+  top: 110px; /* positionnement verticale*/
   background: none;
 }
 
 h1.Description {
-  position: absolute;
-  top: 137px;
-  left: 112px;
-  color: lightgreen;
-  font-size: 20px;
+  position: absolute; /* positionnement absolue*/
+  top: 137px; /* positionnement verticale*/
+  left: 112px; /* positionnement horizontale*/
+  color: lightgreen; /* Couleur du texte */
+  font-size: 20px; /* Taille de la police */
 }
 
 button[name="unlike"] {
-  position: relative;
-  top: 80px;
-  left: -340px;
+  position: relative; /* positionnement relatif*/
+  top: 80px; /* positionnement verticale*/
+  left: -340px; /* positionnement horizontale*/
 }
