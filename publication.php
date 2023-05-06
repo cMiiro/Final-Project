@@ -41,8 +41,24 @@ $commentaires=mysqli_query($connexion,"SELECT * FROM commentaire WHERE idPublica
 </form>
 </td></tr>
 <div class="comment">
-    <table>
+
         <?php
+        //on vérifie si il y a au moins un commentaire sinon celà va créer un tableau vide
+        $first=mysqli_fetch_assoc($commentaires);
+        if($first!==NULL){
+        echo"<table>";
+        echo"<tr><td>";
+        //le permier commentaire doit être afficher en dehors d'une boucle car il n'est plus dans $ commenataire    
+        afficheNomPhotoDeProfil($first["NomUtil"],45);
+            echo "<br>".$first["TexteCom"];
+        if($first['NomUtil']===$_SESSION['user'] || estModo($_SESSION["user"])){
+            $idCom=$first["id"];
+                echo  "<form method='post'>
+                <button type='submit' name='DeleteCom' value=$idCom>
+                <img src=image/croix.png width=25 height=25>
+                </button>
+                 </form>";
+            }
         while ($ligne=mysqli_fetch_assoc($commentaires)){
             echo"<tr><td>";
             afficheNomPhotoDeProfil($ligne["NomUtil"],45);
@@ -56,9 +72,10 @@ $commentaires=mysqli_query($connexion,"SELECT * FROM commentaire WHERE idPublica
                  </form>";
             }
             echo "<br></td></tr>";
-        }
+        }echo"</table>";
+    }
         ?>
-    </table>
+    
 </div>
 
 <?php

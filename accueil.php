@@ -49,10 +49,11 @@ echo "<a href=\"verificationSignalment.php\"><img class=\"verif\" src=\"image/ve
     if($resultat){
         while ($ligne=mysqli_fetch_assoc($resultat)){
          $NomUserPost=$ligne["NomUtil"];
+          //regarde si l'utilisateur est abonné à celui qui à poster la publication
          $req="SELECT * from $user"."abonnement WHERE user='$NomUserPost';";
          $estAbonne=mysqli_query ($connexion,$req);
-         $verification= mysqli_fetch_assoc ($estAbonne); //regarde si l'utilisateur est abonné à celui qui à poster le commentaire
-         if($verification!==NULL){//dans le cas ou il y a au moins un utilisateur du même nom que celui qui a posté le commentaire alors on affiche le commentaire(normalement il y en a au plus un).
+         $verification= mysqli_fetch_assoc ($estAbonne);
+         if($verification!==NULL){//dans le cas ou il y a au moins un utilisateur du même nom que celui qui a posté la publication alors on affiche le commentaire(normalement il y en a au plus un).
              affichePublications($ligne,$modo);
     }}}
     //Dans le cas ou on a chercher avec la barre de recherche un utilisateur alors on va aller sur son profil
